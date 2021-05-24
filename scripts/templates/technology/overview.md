@@ -5,29 +5,26 @@ sidebar_position: 1
 
 # Overview
 
-<!-- ✍ Please add an introductory paragraph about the project, when it was created, etc.
-and fill the list below -->
+<!-- ✍ Please populate the content `/data/technologies/${normalizedTechnology}.json`
+first. The text starting with `{{` will be interpolated in build time with
+the information in that file. -->
 
-* Latest version: <!-- ✍ PLEASE REPLACE -->
-* [Website](<!--✍ PLEASE REPLACE -->)
-* [Documentation](<!--✍ PLEASE REPLACE-->)
+
+<!-- ✍ Please add an introductory paragraph about the project, when it was created, etc. -->
+
+* Latest version: {{technologies.${normalizedTechnology}.releases.0.version}}
+* [Website]({{technologies.${normalizedTechnology}.url}})
+* [Documentation]({{technologies.${normalizedTechnology}.docs}})
 
 
 ## Cross-platform support
 
-<!-- ✍ Please use ✅ in the "Status" column to indicate if the platform is supported -->
 
-| Platform     | Status |
-| ------------ | ------ |
-| Windows      |        |
-| macOS        |        |
-| Linux        |        |
-| iOS          |        |
-| Android      |        |
+{{ table technologies.${normalizedTechnology}.platforms.{} }}
 
 :::caution
 
-Indicate here any gotchas (i.e. minimum suported versions)
+<!-- ✍ Indicate here any gotchas (i.e. minimum suported versions) -->
 
 :::
 
@@ -47,7 +44,4 @@ Indicate here any gotchas (i.e. minimum suported versions)
 
 <!-- ✍ How often is there a new version? Is it predictable? Does it use an evergreen model (i.e.: it gets updated automatically) or do developers need to take care of that? Does it depend on other projects to ship? -->
 
-| Release type | Cadence |
-| ------------ | ------- |
-| Major        | ✍      |
-| Minor/patch  | ✍      |
+{{ table technology.${normalizedTechnology}.releases.[] }}

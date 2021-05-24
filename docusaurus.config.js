@@ -1,3 +1,5 @@
+const interpolateData = require('./src/transformers/interpolate-data');
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'crossplatform.dev',
@@ -86,6 +88,7 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/crossplatform-dev/crossplatform.dev/edit/main/',
+          remarkPlugins: [interpolateData],
         },
         blog: {
           showReadingTime: true,

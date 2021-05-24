@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$defs": {
+    "support": {
+      "type": "string",
+      "enum": ["✅", "", "⚒"]
+    },
+    "platforms": {
+      "type": "object",
+      "properties": {
+        "Windows": { "$ref": "#/$defs/support" },
+        "macOS": { "$ref": "#/$defs/support" },
+        "Linux": { "$ref": "#/$defs/support" },
+        "Android": { "$ref": "#/$defs/support" },
+        "iOS": { "$ref": "#/$defs/support" }
+      },
+      "additionalProperties": false
+    },
+    "languages": {
+      "type": "object",
+      "properties": {
+        "C++": { "$ref": "#/$defs/support" },
+        "C#": { "$ref": "#/$defs/support" },
+        "Go": { "$ref": "#/$defs/support" },
+        "Java": { "$ref": "#/$defs/support" },
+        "Node.js": { "$ref": "#/$defs/support" },
+        "Rust": { "$ref": "#/$defs/support" }
+      }
+    },
+    "release": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["version", "date"]
+    },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": {
+          "$ref": "#/$defs/release"
+        }
+      }
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "properties": {
+      "$schema": { "type": "string" },
+      "name": { "type": "string" },
+      "platforms": { "$ref": "#/$defs/platforms" },
+      "languages": { "$ref": "#/$defs/languages" },
+      "url": { "$ref": "#/$defs/website" },
+      "community": { "$ref": "#/$defs/website" },
+      "documentation": { "$ref": "#/$defs/website" },
+      "releases": { "$ref": "#/$defs/releases" }
+    },
+    "additionalProperties": false,
+    "required": ["name", "platforms", "languages", "releases", "url"]
+  }
+}

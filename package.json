@@ -12,7 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "add-technology": "node scripts/add-technology.js"
+    "add-technology": "node scripts/add-technology.js",
+    "prebuild": "json2ts -i data/schemas -o data/types"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.0",
@@ -38,7 +39,11 @@
     ]
   },
   "devDependencies": {
+    "dayjs": "^1.10.4",
+    "globby": "^11.0.3",
+    "json-schema-to-typescript": "^10.1.4",
     "json5": "^2.2.0",
+    "pluralize": "^8.0.0",
     "prettier": "^2.3.0"
   }
 }
