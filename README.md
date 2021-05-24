@@ -1,5 +1,7 @@
 # Crossplatform.dev
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94c5bec4-b9c5-4afb-bdc3-bbc10d237598/deploy-status)](https://app.netlify.com/sites/musing-turing-85b4c5/deploys)
+
 This repository contains the code and contents of https://crossplatform.dev.
 
 It is built using [Docusaurus 2](https://docusaurus.io/) and deployed on Netlify.
