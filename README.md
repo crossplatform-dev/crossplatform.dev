@@ -23,7 +23,7 @@ To install it locally, you will need to:
 
 The project has the following folder structure:
 
-```
+```console
 crossplatform.dev
  |
  ├─ blog → Markdown files with the blogposts
@@ -77,7 +77,7 @@ contents of the json files loaded.
 
 For example:
 
-```
+```console
 |- technologies
 |   |- electron.json
 |   |- ionic.json
@@ -100,21 +100,21 @@ You can access this data in a couple different ways;
 
 To print the value of a property you need to write something like:
 
-```
+```text
 {{ path.fileName.property1.property2 }}
 ```
 
 Following the previous example, to access the property
 `url` under `technologies/electron.json` the markup will be:
 
-```
+```text
 {{ technologies.electron.url }}
 ```
 
 If you want to access a particular item on an array you can also
 do it. The following will print the most recent version of Electron:
 
-```
+```text
 {{ technologies.electron.releases.0.version }}
 ```
 
@@ -128,14 +128,14 @@ create tables interpolating data:
 To create a table that compares a property accross different
 categories you use the following syntax:
 
-```
+```text
 {{ table folder.{}.property }}
 ```
 
 For example, to generate a table that shows the platform support
 of all the technologies the code is:
 
-```
+```text
 {{ table technologies.{}.platforms }}
 ```
 
@@ -143,14 +143,14 @@ of all the technologies the code is:
 
 To create a table for a property that is an object you can do this:
 
-```
+```text
 {{ table folder.filename.objectProperty.{} }}
 ```
 
 For example, to list the platforms supported by Electron you have to
 write the following:
 
-```
+```text
 {{ table technologies.electron.platforms.{} }}
 ```
 
@@ -159,14 +159,14 @@ write the following:
 To create a table for a particular property that is an Array you
 can do the following:
 
-```
+```text
 {{ table folder.filename.arrayProperty.[] }}
 ```
 
 For example, the following will creata a list table with the latest
 Electron releases.
 
-```
+```text
 {{ table technologies.electron.releases.[] }}
 ```
 
@@ -174,7 +174,7 @@ This assumes that `releases` is an Array of the same type of items
 and it will generate a table using the property names of the 1st
 object as the column names, adding a new line per item in the Array:
 
-```
+```markdown
 | Version | Date |
 | --- | --- |
 | vX.Y.Z | 2021/10/01 |
@@ -183,20 +183,18 @@ object as the column names, adding a new line per item in the Array:
 
 If you want to just list one of the properties you can do the following:
 
-```
+```text
 {{ table technologies.electron.releases.[].version }}
 ```
 
 and the output will be:
 
-
-```
+```markdown
 | Version |
 | --- |
 | vX.Y.Z |
 ...
 ```
-
 
 [git]: https://git-scm.com/downloads
 [node.js]: https://nodejs.org/en/download/
