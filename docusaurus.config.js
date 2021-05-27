@@ -16,7 +16,7 @@ module.exports = {
       title: 'crossplatform.dev',
       logo: {
         alt: 'crossplatform.dev',
-        src: 'img/logo.svg',
+        src: 'img/xplat-icon.svg',
       },
       items: [
         {
@@ -25,7 +25,7 @@ module.exports = {
           position: 'left',
           label: 'Introduction',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/crossplatform-dev/crossplatform.dev',
           label: 'GitHub',
@@ -90,12 +90,12 @@ module.exports = {
             'https://github.com/crossplatform-dev/crossplatform.dev/edit/main/',
           remarkPlugins: [interpolateData],
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/crossplatform-dev/crossplatform.dev/edit/main/blog/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/crossplatform-dev/crossplatform.dev/edit/main/blog/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
