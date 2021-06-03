@@ -8,12 +8,13 @@
 
 //@ts-check
 const path = require('path');
-const fs = require('fs').promises;
+const fs = require('fs');
 const globby = require('globby');
 // This module is pulled by docusaurus
 const visit = require('unist-util-visit-parents');
-
-const DATA_FOLDER = path.join(__dirname, '..', '..', 'data');
+// globby only accepts forward slashes so we "fix" this for Windows
+const posixDirname = __dirname.replace(/\\/g, '/');
+const DATA_FOLDER = path.posix.join(posixDirname, '..', '..', 'data');
 
 const interpolators = [
   require('./interpolation-transformers/text'),
@@ -25,10 +26,13 @@ const interpolators = [
  * @param {string} filename
  */
 const getParentFolderName = (filename) => {
-  const dirname = path.dirname(filename);
+  const dirname = path.posix.dirname(filename);
 
-  return dirname.split(path.sep).pop();
+  return dirname.split(path.posix.sep).pop();
 };
+
+
+let _data;
 
 /**
  * Loads all the `.json` files under `dataFolder` that are
@@ -54,30 +58,34 @@ const getParentFolderName = (filename) => {
  *
  * @param {string} dataFolder
  */
-const loadData = async (dataFolder) => {
-  const dataLocations = await globby(
-    [path.join(dataFolder, '**/*.json'), '!**/schemas/**'],
+const loadData = (dataFolder) => {
+  if(_data){
+    return _data;
+  }
+
+  const dataLocations = globby.sync(
+    [path.posix.join(dataFolder, '**/*.json'), '!**/schemas/**'],
     {
       absolute: true,
     }
   );
 
-  const data = {};
+  _data = {};
 
   for (const file of dataLocations) {
     /** @type {import('../../data/types/technology').Technology} */
-    const information = JSON.parse(await fs.readFile(file, 'utf-8'));
+    const information = JSON.parse(fs.readFileSync(file, 'utf-8'));
     const category = getParentFolderName(file);
     const entryName = path.basename(file, '.json');
 
-    if (!data[category]) {
-      data[category] = {};
+    if (!_data[category]) {
+      _data[category] = {};
     }
 
-    data[category][entryName] = information;
+    _data[category][entryName] = information;
   }
 
-  return data;
+  return _data;
 };
 
 const attacher = () => {
