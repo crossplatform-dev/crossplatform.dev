@@ -13,6 +13,7 @@ module.exports = {
       label: 'Browser engine',
       items: [
         'browser-engine/overview',
+        'browser-engine/electron',
       ],
     },
   ],
