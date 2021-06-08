@@ -1,8 +1,9 @@
 ---
-id: browser
+id: overview
+slug: /browser-engine
 ---
 
-# Browser engine
+# Overview
 
 Cross-platform technologies that use a browser engine (also called rendering engine) to render
 their UI have been around for many years, more precisely since 2009. Chrome was released the year
@@ -134,5 +135,5 @@ There are many strategies in here, each one with its pros and cons:
 [NW.js]: https://nwjs.io/
 [Tauri]: https://tauri.studio/
 [V8]: https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
-[Web and PWA]: ./web.md
+[Web and PWA]: ../web/web.md
 [WebSockets]: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API

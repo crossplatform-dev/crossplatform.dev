@@ -28,17 +28,17 @@ are:
 
 <!-- TODO: Add a diagram representing the above -->
 
-[Browser engine]: ./browser-engine.md
+[Browser engine]: ./browser-engine/browser-engine.md
 [Chromium]: http://www.chromium.org/Home
 [Chrome]: https://www.google.com/chrome/index.html
 [Chromium Embedded Framework]: https://bitbucket.org/chromiumembedded/cef/wiki/Home
-[Compiled]: ./compiled.md
+[Compiled]: ./compiled/compiled.md
 [Edge]: https://www.microsoft.com/en-us/edge
 [Electron]: https://www.electronjs.org
 [Firefox]: https://www.mozilla.org/en-US/firefox/new/
 [Flutter]: https://flutter.dev/
 [Gecko]: https://developer.mozilla.org/en-US/docs/Mozilla/Gecko
-[JavaScript projection]: ./javascript-projection.md
+[JavaScript projection]: ./javascript-projection/javascript-projection.md
 [NativeScript]: https://nativescript.org/
 [NodeGui]: https://docs.nodegui.org/
 [NW.js]: https://nwjs.io/
@@ -46,6 +46,6 @@ are:
 [React Native]: https://reactnative.dev
 [Safari]: https://www.apple.com/safari/
 [Tauri]: https://tauri.studio/
-[Web]: ./web.md
+[Web]: ./web/web.md
 [WebKit]: https://webkit.org/
 [Xamarin]: https://dotnet.microsoft.com/apps/xamarin

@@ -23,7 +23,7 @@ module.exports = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Introduction',
+          label: 'cross-platform development',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
