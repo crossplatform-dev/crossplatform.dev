@@ -14,6 +14,7 @@ module.exports = {
       items: [
         'browser-engine/overview',
         'browser-engine/electron',
+        'browser-engine/webview2',
       ],
     },
   ],
