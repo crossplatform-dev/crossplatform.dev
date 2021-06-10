@@ -33,7 +33,10 @@ const TECHNOLOGY = {
     'Node.js': '',
     Rust: '',
   },
-  releases: [],
+  releases: [{
+    version: '0.0.1',
+    date: '2021-01-01T00:00:00Z'
+  }],
   url: 'https://',
   community: 'https://',
   documentation: 'https://',
