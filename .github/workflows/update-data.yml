@@ -1,0 +1,20 @@
+name: 'Update data'
+
+on:
+  schedule:
+    - cron: "0 19 * * *"
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: 'npm install'
+      - name: Update data
+        run: 'npm run update-data'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
