@@ -16,7 +16,7 @@ Groups].
 Electron applications use Chromium as the shell to render the User Interface. Developers
 use HTML, CSS and JavaScript to build their apps, which means they can use the libraries and tools
 available to the web community such as React, webpack, Babel, etc. One of the main differences with
-other technologies under the _[browser-engine]_ category, is that JavaScript is used to access the
+other technologies under the _[Web UI]_ category, is that JavaScript is used to access the
 Operating System features as well. This is because Electron applications come with [Node.js]
 support. At a high-level, [Electron adds the Node.js layer to Chromium's JavaScript engine
 V8][electron-node]. This means that developers can leverate all its ecosystem and also write C/C++
@@ -66,7 +66,7 @@ the needs of a particular company or product.
 | :------------- | :----: |
 | Website | [{{technologies.electron.url}}]({{technologies.electron.url}}) |
 | Platforms | Desktop |
-| Type | [browser-engine] |
+| Type | [Web UI] |
 | Software type | OSS |
 | License | [MIT] |
 | Copyright | [OpenJS Foundation][electron-foundation] |
@@ -99,7 +99,6 @@ would be Rust, which can be run via [Neon].
 <!-- Ref links -->
 
 [Apple Store policy 2.5.6]: https://developer.apple.com/app-store/review/guidelines/
-[browser-engine]: ./browser-engine.md
 [chrome release cycle]: https://blog.chromium.org/2021/03/speeding-up-release-cycle.html
 [Discord]: https://discord.com/
 [electron-foundation]: https://openjsf.org/blog/2019/12/11/electron-joins-the-openjs-foundation/
@@ -113,5 +112,6 @@ would be Rust, which can be run via [Neon].
 [release timeline]: https://www.electronjs.org/docs/tutorial/electron-timelines
 [Slack]: https://slack.com/
 [Visual Studio Code]: https://code.visualstudio.com/
+[Web UI]: ./web-ui.md
 [WhatsApp]: https://www.whatsapp.com/
 [Working Groups]: https://github.com/electron/governance#working-groups

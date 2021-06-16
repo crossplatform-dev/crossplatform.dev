@@ -10,11 +10,11 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Browser engine',
+      label: 'Web UI',
       items: [
-        'browser-engine/overview',
-        'browser-engine/electron',
-        'browser-engine/webview2',
+        'web-ui/overview',
+        'web-ui/electron',
+        'web-ui/webview2',
       ],
     },
   ],

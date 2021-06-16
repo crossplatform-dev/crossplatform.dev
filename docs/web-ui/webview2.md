@@ -55,7 +55,7 @@ source and developers can provide feedback via this
 | -------------- | :----: |
 | Website | [{{technologies.webview2.url}}]({{technologies.webview2.url}}) |
 | Platforms | Desktop |
-| Type | [Browser engine] |
+| Type | [Web UI] |
 | Software type | Close source |
 | License | https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.430/License |
 | Copyright | Microsoft |
@@ -81,7 +81,7 @@ source and developers can provide feedback via this
 
 <!-- Ref links -->
 
-[Browser engine]: ./browser-engine.md
+[Web UI]: ./web-ui.md
 [Morgan Stanley]: https://www.youtube.com/watch?v=8y3ZCzw3LtA
 [UWP]: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
 [WebBrowser control]: https://docs.microsoft.com/en-us/dotnet/desktop/winforms/controls/webbrowser-control-overview?view=netframeworkdesktop-4.8

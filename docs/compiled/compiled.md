@@ -1,4 +1,6 @@
 ---
+id: overview
+slug: /compiled
 
 ---
 

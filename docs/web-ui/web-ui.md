@@ -1,16 +1,16 @@
 ---
 id: overview
-slug: /browser-engine
+slug: /web-ui
 ---
 
 # Overview
 
-Cross-platform technologies that use a browser engine (also called rendering engine) to render
-their UI have been around for many years, more precisely since 2009. Chrome was released the year
-before and it was already the
-fastest browser thanks to its new [V8] JavaScript engine. The web platform is becoming faster and
-sites more interactive. At the same time, iPhone (2007) and Android (2008) devices are becoming more
-and more popular, but it is complicated to find experienced developers, let alone for both.
+Cross-platform technologies classified as _Web UI_ use a browser engine (also called rendering
+engine) to render their UI have been around for many years, more precisely since 2009. Chrome was
+released the year before and it was already the fastest browser thanks to its new [V8] JavaScript
+engine. The web platform is becoming faster and sites more interactive. At the same time, iPhone
+(2007) and Android (2008) devices are becoming more and more popular, but it is complicated to find
+experienced developers, let alone for both.
 
 To fill this opportunity [Apache Cordova] is created (formerly PhoneGap): a mobile development
 platform that uses the platforms’ WebView control (a control that allows you to render web content
@@ -79,7 +79,7 @@ A few questions that can help us make a decission are:
 ## Inter-Process Communication layer
 
 While there are many browsers and cross-platform technologies, the reality is that there are not
-that many browser enginges (more about this in [Web and PWA]). In fact, most of the technologies
+that many browser enginges (more about this in _[Browser engine]_). In fact, most of the technologies
 rely on Chromium or WebKit. Unsurprisingly, when using the same engine and the same web content all
 these technologies show similar performance characteristics (memory, processes, threads...). It
 makes sense, the cost of running a browser engine is considerably larger than any “overhead” that
@@ -128,6 +128,7 @@ There are many strategies in here, each one with its pros and cons:
 
 [Apache Cordova]: https://en.wikipedia.org/wiki/Apache_Cordova
 [Blazor Desktop]: https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-1/#blazor-desktop-apps
+[Browser engine]: ../browser/browser.md
 [Capacitor]: https://capacitorjs.com/
 [CEF]: https://bitbucket.org/chromiumembedded/cef/wiki/Home
 [Electron]: https://www.electronjs.org
@@ -135,5 +136,4 @@ There are many strategies in here, each one with its pros and cons:
 [NW.js]: https://nwjs.io/
 [Tauri]: https://tauri.studio/
 [V8]: https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
-[Web and PWA]: ../web/web.md
 [WebSockets]: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
