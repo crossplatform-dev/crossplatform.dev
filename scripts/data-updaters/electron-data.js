@@ -80,7 +80,7 @@ const update = async () => {
   electronData.releases = releases;
 
   await fs.writeFile(
-    electronDataPath,
+    ELECTRON_DATA_PATH,
     JSON.stringify(electronData, null, 2),
     'utf-8'
   );

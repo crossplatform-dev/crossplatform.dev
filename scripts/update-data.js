@@ -5,7 +5,11 @@
  * if there are any;
  */
 
-const updateElectron = require('./data-updaters/electron-data').update;
+const updaters = new Map([
+  ['Electron', require('./data-updaters/electron-data').update],
+  ['WebView2', require('./data-updaters/webview2-data').update],
+]);
+
 const { getChanges, pushChanges } = require('./utils/git-commands');
 
 const BRANCH = 'main';
@@ -14,12 +18,15 @@ const EMAIL = 'bot@crossplatform.dev';
 const NAME = 'crossplatform-bot';
 
 const start = async () => {
-  console.log(`Updating Electron data`);
-  await updateElectron();
+
+  for(const [technology, updater] of updaters){
+    console.log(`Updating ${technology} data`);
+    await updater();
+  }
 
   const changes = await getChanges();
 
-  if(!changes){
+  if (!changes) {
     console.log(`No changes detected, done!`);
     return;
   }

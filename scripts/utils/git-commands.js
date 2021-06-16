@@ -6,10 +6,7 @@
  *
  * https://github.com/electron/electronjs.org-new/blob/51e5f584353a8e2f653b0d06ca02a08154a48f13/scripts/utils/git-commands.js
  */
-
-const github = require('@actions/github');
 const { execute } = require('./execute');
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 /**
  * Creates a new commit with the current changes.
