@@ -5,12 +5,70 @@ slug: /browser-engine
 
 # Overview
 
-Cross-platform technologies that use a browser engine (also called rendering engine) to render
-their UI have been around for many years, more precisely since 2009. Chrome was released the year
-before and it was already the
-fastest browser thanks to its new [V8] JavaScript engine. The web platform is becoming faster and
-sites more interactive. At the same time, iPhone (2007) and Android (2008) devices are becoming more
-and more popular, but it is complicated to find experienced developers, let alone for both.
+Developers of this category use mainly HTML, CSS, and JavaScript to create their applications,
+which are executed on a "browser engine". There are currently 3 actively maintained browser engines:
+
+* [Gecko]
+* [WebKit]
+* [Chromium]
+
+These browser engines power not only "web browsers", but also any technology that uses these
+language to create a User Interface ("Embedded browser engine"). While the foundation might be the
+same, there are some key differences between these two sub-categories.
+
+<!-- Venn diagram of browser engines, web browsers, embedded browser engine -->
+
+## Web browsers
+
+With more than 4 billion internet users and 1.7 billion websites, the web is one (if not the most)
+popular platform.
+
+While websites started as a way to render documents back in 1990, they have come a long way. They
+provide rich experiences with real time communication, video, and 3D graphics. They also adapt
+dynamically to any form factor, work offline, send notifications, and more.
+With all these new features and capabilities, browsers have had to evolve and become more like mini
+OSes, protecting users from malicious attacks and poorly written code.
+
+Tthe [most used ones][statcounter] are [Chrome] ([Chromium]), [Safari] ([WebKit]), and [Firefox]
+([Gecko]). But even though they all are considered modern engines, they are not the same. Even for
+the same browser there can be significant differences accross platforms (more notably on iOS where
+they are force to be a wrapper around the WebKit's WebView).
+
+As with all other technologies, there are pros and cons that developers need to evaluate. The main
+questions to ask are around:
+
+* Feature requirements and platform support
+* Distribution and infrastructure
+
+### Feature requirements and platform support
+
+As mentioned earlier, the Web API has become richer over the last few years. Yet there are features
+that are still not available (nor they will be, like platform specific features).
+
+It is important for developers to know what are the required features and if there is an API to
+enable that. The [capabilities status][Project Fugu] website is a good place to learn about what is
+already available or in development. Not all these APIs are supported by all browsers at the same
+time, so developers need to additionally take into account what does their user base look like, if
+there are alternatives that could be use, or if the experience they are planning could be
+[progressively enhanced][Progressive enhancement] instead of rely entirely on it.
+
+### Distribution and infrastructure
+
+:::caution
+
+This sections needs to be written. Some talking points are:
+
+* _Talk about server vs install file_
+* _Requiring a web server to deliver the app_
+
+:::
+
+## Embedded browser engine
+
+This sub-category has been around since 2009. Chrome was released the year before and it was already
+the fastest browser thanks to its new [V8] JavaScript engine. The web platform is becoming faster
+and sites more interactive. At the same time, iPhone (2007) and Android (2008) devices are becoming
+more and more popular, but it is complicated to find experienced developers, let alone for both.
 
 To fill this opportunity [Apache Cordova] is created (formerly PhoneGap): a mobile development
 platform that uses the platforms’ WebView control (a control that allows you to render web content
@@ -44,7 +102,7 @@ main technical questions can be grouped in the following categories:
 * Hosting language, features and hotpaths
 * Inter-Process Communication layer
 
-## Platform support and Rendering engine
+### Platform support and Rendering engine
 
 At first it can be a bit surprising to group "Platform support" and "Rendering engine". The reason
 is that they are intertwined and one impacts the other (and vice-versa). Technologies that bundle
@@ -54,7 +112,7 @@ Because iOS devices do not allow that, their teams usually limit themselves to d
 to reach more platforms (i.e.: mobile as well), at the expense, in some cases, of quirks between the
 different platforms or if the device is running an older version of the control.
 
-## Hosting language, features and hotpaths
+### Hosting language, features and hotpaths
 
 One common thing to this category is that most of the UI, if not all, is created using web
 technologies (HTML, CSS and JavaScript). But the host could use a completely different language
@@ -76,10 +134,10 @@ A few questions that can help us make a decission are:
   fastest possible version of an algorithm on the host and still have poor results if that
   communication is done in an efficient way.
 
-## Inter-Process Communication layer
+### Inter-Process Communication layer
 
 While there are many browsers and cross-platform technologies, the reality is that there are not
-that many browser enginges (more about this in [Web and PWA]). In fact, most of the technologies
+that many browser enginges as we have seen before. In fact, most of the technologies that render web
 rely on Chromium or WebKit. Unsurprisingly, when using the same engine and the same web content all
 these technologies show similar performance characteristics (memory, processes, threads...). It
 makes sense, the cost of running a browser engine is considerably larger than any “overhead” that
@@ -130,10 +188,20 @@ There are many strategies in here, each one with its pros and cons:
 [Blazor Desktop]: https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-1/#blazor-desktop-apps
 [Capacitor]: https://capacitorjs.com/
 [CEF]: https://bitbucket.org/chromiumembedded/cef/wiki/Home
+[Chromium]: http://www.chromium.org/Home
+[Chrome]: https://www.google.com/chrome/index.html
+[Edge]: https://www.microsoft.com/en-us/edge
 [Electron]: https://www.electronjs.org
 [Fetch API]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+[Gecko]: https://developer.mozilla.org/en-US/docs/Mozilla/Gecko
+[Firefox]: https://www.mozilla.org/en-US/firefox/new/
 [NW.js]: https://nwjs.io/
+[Progressive enhancement]: https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
+[Project Fugu]: https://web.dev/fugu-status/
+[Safari]: https://www.apple.com/safari/
+[statcounter]: https://gs.statcounter.com/browser-market-share
 [Tauri]: https://tauri.studio/
+[Types of technologies]: ../types.md
 [V8]: https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
-[Web and PWA]: ../web/web.md
+[WebKit]: https://webkit.org/
 [WebSockets]: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
