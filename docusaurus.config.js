@@ -33,6 +33,14 @@ module.exports = {
         },
       ],
     },
+    announcementBar: {
+      id: 'disclaimer',
+      content:
+        '⚒ This website is a work in progress. If you want to help let us know on <a href="https://github.com/crosplatform-dev/crossplatform.dev">GitHub</a> 🙏',
+      backgroundColor: '#fafbfc',
+      textColor: '#091E42',
+      isCloseable: false,
+    },
     // footer: {
     //   style: 'dark',
     //   links: [
