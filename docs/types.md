@@ -32,7 +32,7 @@ is easier to rationalize. If you believe there is a better way, please [let us k
   those situations developers need to look at other technologies that use a browser engine to render
   the UI but allow direct access to the platform. Some examples of these technologies are [Electron]
   (used by VS Code), [Chromium Embedded Framework] (used by Spotify), [Apache Cordova], [Ionic],
-  [NW.js], [Tauri], etc.
+  [NW.js], [Tauri], [Chromely] etc.
 
 * **[Platform controls]**: In this category the technology uses the controls (buttons, inputs, etc.)
   provided by the Operating System, and provides an abstraction to create these interfaces for all
@@ -46,7 +46,7 @@ is easier to rationalize. If you believe there is a better way, please [let us k
   System to draw directly on the screen. This means that they are also responsible for implementing
   any controls developers might need. For that reason, applications in this category usually have a
   consistent look and feel regardless of where they are running. Some of the technologies here are
-  [Qt] and [Flutter].
+  [Qt], [Flutter], [UnoPlatform] and [Avalonia] (mobile support is in public preview).
 
 <!-- TODO: Add a diagram representing the above -->
 
@@ -74,3 +74,6 @@ is easier to rationalize. If you believe there is a better way, please [let us k
 [Tauri]: https://tauri.studio/
 [WebKit]: https://webkit.org/
 [Xamarin]: https://dotnet.microsoft.com/apps/xamarin
+[Chromely]: https://github.com/chromelyapps/Chromely
+[UnoPlatform]: https://platform.uno
+[Avalonia]: https://www.avaloniaui.net
