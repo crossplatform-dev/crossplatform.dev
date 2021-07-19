@@ -77,8 +77,7 @@ not available in the web.
 
 Since that year, there have been multiple technologies that have been created that use the WebView
 provided by the Operating System or even bundle a full browser engine such as [Electron] (2013),
-[Chromium Embedded Framework (CEF)][CEF] (2009), [NW.js] (2012), [Capacitor] (2019), [Tauri] (2021),
-and more.
+[Chromium Embedded Framework (CEF)][CEF] (2009), [NW.js] (2012), [Capacitor] (2019), [Tauri] (2021), [Chromely] (2018) and more.
 
 The high-level architecture of these technologies is very similar and can be seen as the following:
 
@@ -205,3 +204,4 @@ There are many strategies in here, each one with its pros and cons:
 [V8]: https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 [WebKit]: https://webkit.org/
 [WebSockets]: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
+[Chromely]: https://github.com/chromelyapps/Chromely
