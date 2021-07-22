@@ -12,7 +12,6 @@ const TECHNOLOGY_TEMPLATE_PATH = path.join(
   'technology'
 );
 const DATA_PATH = path.join(__dirname, '..', 'data');
-const TECHNOLOGIES_PATH = path.join(DATA_PATH, 'technologies');
 const SIDEBARS_PATH = path.join(__dirname, '..', 'sidebars.js');
 // TODO: Create this from the schema so it's easier to maintain
 const TECHNOLOGY = {
@@ -202,7 +201,7 @@ ${createdFiles.join('\n')}`);
   const json = { ...TECHNOLOGY, ...{ name: technology } };
 
   await fs.writeFile(
-    path.join(TECHNOLOGIES_PATH, `${normalizedTechnology}.json`),
+    path.join(DATA_PATH, `${normalizedTechnology}.json`),
     JSON.stringify(json, null, 2),
     'utf-8'
   );
@@ -220,7 +219,7 @@ ${createdFiles.join('\n')}`);
 
   console.log(`Updating sidebars.js`);
 
-  categoryItem.items.push(`${normalizedCategory}/${normalizedTechnology}`);
+  categoryItem.items.push(normalizedTechnology);
 
   await fs.writeFile(
     SIDEBARS_PATH,

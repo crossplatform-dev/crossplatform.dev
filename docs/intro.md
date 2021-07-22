@@ -1,6 +1,6 @@
 ---
 title: Why cross-platform development?
-slug: /introduction
+id: intro
 ---
 
 # Why cross-platform development?

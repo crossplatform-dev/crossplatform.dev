@@ -21,9 +21,9 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'types',
           position: 'left',
-          label: 'Why?',
+          label: 'Types of technologies',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {

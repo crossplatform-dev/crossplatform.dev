@@ -51,11 +51,11 @@ is easier to rationalize. If you believe there is a better way, please [let us k
 <!-- TODO: Add a diagram representing the above -->
 
 [Apache Cordova]: https://cordova.apache.org/
-[Browser engine]: ./browser-engine/browser-engine.md
+[Browser engine]: ./browser-engine.md
 [Chromium]: http://www.chromium.org/Home
 [Chrome]: https://www.google.com/chrome/index.html
 [Chromium Embedded Framework]: https://bitbucket.org/chromiumembedded/cef/wiki/Home
-[Direct drawing]: ./direct-drawing/direct-drawing.md
+[Direct drawing]: ./direct-drawing.md
 [Edge]: https://www.microsoft.com/en-us/edge
 [Electron]: https://www.electronjs.org
 [Firefox]: https://www.mozilla.org/en-US/firefox/new/
@@ -65,7 +65,7 @@ is easier to rationalize. If you believe there is a better way, please [let us k
 [Ionic]: https://ionicframework.com/
 [NativeScript]: https://nativescript.org/
 [NW.js]: https://nwjs.io/
-[Platform controls]: ./platform-controls/platform-controls.md
+[Platform controls]: ./platform-controls.md
 [Progressive Web Apps]: https://web.dev/progressive-web-apps/
 [Project Fugu]: https://web.dev/fugu-status/
 [Qt]: https://www.qt.io/
