@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@octokit/graphql": "^4.8.0",
     "dayjs": "^1.10.6",
     "execa": "^5.1.1",
     "globby": "^11.0.4",

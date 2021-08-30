@@ -15,6 +15,7 @@ module.exports = {
       label: 'Platform controls',
       items: [
         'platform-controls',
+        'react-native',
       ],
     },
     {
