@@ -8,6 +8,7 @@
 const updaters = new Map([
   ['Electron', require('./data-updaters/electron-data').update],
   ['WebView2', require('./data-updaters/webview2-data').update],
+  ['ReactNative', require('./data-updaters/react-native-data').update],
 ]);
 
 const { getChanges, pushChanges } = require('./utils/git-commands');
