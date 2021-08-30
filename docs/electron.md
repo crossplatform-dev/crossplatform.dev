@@ -41,7 +41,7 @@ latest 3 major versions. This means that the length of support will change from 
 months.
 :::
 
-Electron applications are self-contained: Chromiun abd Node.js are bundled in the application. This
+Electron applications are self-contained: Chromiun and Node.js are bundled in the application. This
 has the advantage for the users to not have to install any pre-requisites, and for developers to
 know exactly what dependencies are being run. On the other side, it also means that updating the
 Electron version is a developer responsibility (developer driven).
