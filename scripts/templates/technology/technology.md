@@ -50,7 +50,7 @@ foundation, company driven, etc. -->
 
 **Language support:**
 
-{{ table technologies.electron.languages.{} }}
+{{ table technologies.${normalizedTechnology}.languages.{} }}
 
 :::note
 <!-- ✍ write down any additional notes about languages here or delete this part -->
