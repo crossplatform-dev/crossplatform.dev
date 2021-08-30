@@ -14,8 +14,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+          cache: 'npm'
       - name: Install dependencies
-        run: 'npm install'
+        run: 'npm -v && npm ci'
       - name: Update data
         run: 'npm run update-data'
         env:
