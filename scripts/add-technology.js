@@ -29,7 +29,7 @@ const TECHNOLOGY = {
     'C#': '',
     Go: '',
     Java: '',
-    'Node.js': '',
+    JavaScript: '',
     Rust: '',
   },
   releases: [{

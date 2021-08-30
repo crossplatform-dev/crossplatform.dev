@@ -23,7 +23,7 @@
         "C#": { "$ref": "#/$defs/support" },
         "Go": { "$ref": "#/$defs/support" },
         "Java": { "$ref": "#/$defs/support" },
-        "Node.js": { "$ref": "#/$defs/support" },
+        "JavaScript": { "$ref": "#/$defs/support" },
         "Rust": { "$ref": "#/$defs/support" }
       }
     },
