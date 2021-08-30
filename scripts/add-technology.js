@@ -32,21 +32,18 @@ const TECHNOLOGY = {
     JavaScript: '',
     Rust: '',
   },
-  releases: [{
-    version: '0.0.1',
-    date: '2021-01-01T00:00:00Z'
-  }],
+  releases: [
+    {
+      version: '0.0.1',
+      date: '2021-01-01T00:00:00Z',
+    },
+  ],
   url: 'https://',
   community: 'https://',
   documentation: 'https://',
 };
 
-const categories = [
-  'Browser engine',
-  'Compiled',
-  'JavaScript projection',
-  'Web',
-];
+const categories = ['Browser engine', 'Direct drawing', 'Platform controls'];
 
 /**
  * Listens for stdin and returns the first line of text received.
@@ -143,7 +140,9 @@ const writeTemplates = async (templates, information, destination) => {
 
   for (const [filePath, content] of templates) {
     // 🛑 HACK ahead!! we assume that `information[1]` is `normalizedTechnology`. We should probably validate this
-    const finalPath = path.join(destination, filePath).replace('technology', information[1].value);
+    const finalPath = path
+      .join(destination, filePath)
+      .replace('technology', information[1].value);
 
     const interpolatedContent = interpolate(content, information);
 
@@ -189,11 +188,7 @@ ${categories.join('\n')}`);
     },
   ];
 
-  const createdFiles = await writeTemplates(
-    templates,
-    information,
-    path.join(DOCS_ROOT, normalizedCategory)
-  );
+  const createdFiles = await writeTemplates(templates, information, DOCS_ROOT);
 
   console.log(`Documentation files created:
 ${createdFiles.join('\n')}`);
@@ -201,19 +196,21 @@ ${createdFiles.join('\n')}`);
   const json = { ...TECHNOLOGY, ...{ name: technology } };
 
   await fs.writeFile(
-    path.join(DATA_PATH, `${normalizedTechnology}.json`),
+    path.join(DATA_PATH, 'technologies', `${normalizedTechnology}.json`),
     JSON.stringify(json, null, 2),
     'utf-8'
   );
 
   const sidebars = require(SIDEBARS_PATH);
 
-  const categoryItem = sidebars.websiteSidebar.find((item) =>{
+  const categoryItem = sidebars.websiteSidebar.find((item) => {
     return item.label === category;
   });
 
-  if(!categoryItem){
-    console.error(`There was an error adding the element to "sidebars.js" under the category ${category}, please do it manually`);
+  if (!categoryItem) {
+    console.error(
+      `There was an error adding the element to "sidebars.js" under the category ${category}, please do it manually`
+    );
     process.exit(1);
   }
 

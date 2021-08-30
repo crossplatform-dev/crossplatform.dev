@@ -10,7 +10,19 @@ module.exports = {
         'webview2',
       ],
     },
-    'direct-drawing',
-    'platform-controls'
+    {
+      type: 'category',
+      label: 'Platform controls',
+      items: [
+        'platform-controls',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Direct drawing',
+      items: [
+        'direct-drawing',
+      ],
+    },
   ],
 };
