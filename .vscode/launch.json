@@ -29,9 +29,9 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Update content",
+      "name": "Update data",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/scripts/update-content.js",
+      "program": "${workspaceFolder}/scripts/update-data.js",
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
     },
@@ -41,7 +41,8 @@
       "name": "Current file",
       "skipFiles": ["<node_internals>/**"],
       "program": "${file}",
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

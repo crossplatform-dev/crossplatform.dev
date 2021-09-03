@@ -82,7 +82,7 @@ can have breaking changes.
 
 While React Native is OSS
 [{{technologies.react-native.codeLicense.name}}]({{technologies.react-native.codeLicense.url}})
-licensed) and has contributors from different companies, the ultimate decission maker is Facebook.
+licensed and has contributors from different companies, the ultimate decission maker is Facebook.
 
 ## Internals
 
