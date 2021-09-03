@@ -2,13 +2,13 @@
 
 const { update } = require('../utils/nuget');
 
-const TECHNOLOGY = 'webview2';
-const PACKAGE_NAME = 'microsoft.web.webview2'
+const TECHNOLOGY = 'xamarin';
+const PACKAGE_NAME = 'xamarin.forms'
 
 /**
  * Updates all the information related to WebView2
  */
-const updateWV2 = async () => {
+const updateXamarin = async () => {
   await update(TECHNOLOGY, PACKAGE_NAME);
 };
 
@@ -17,9 +17,10 @@ const updateWV2 = async () => {
 // by testing `require.main === module`.
 // https://nodejs.org/docs/latest/api/modules.html#modules_accessing_the_main_module
 if (require.main === module) {
-  updateWV2();
+  updateXamarin();
 }
 
 module.exports = {
-  update: updateWV2,
+  update: updateXamarin,
 };
+

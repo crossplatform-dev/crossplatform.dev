@@ -19,7 +19,6 @@ details of each technology or, in some cases, know about the differences for a p
 
 If there is some information that you would like to see in here, please open an issue in [GitHub].
 
-
 ### Platform support
 
 Have a quick look at all the platforms supported by the different technologies.

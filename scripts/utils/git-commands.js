@@ -17,8 +17,13 @@ const { execute } = require('./execute');
 const createCommit = async (email, name, commitMessage) => {
   await execute('git remote -vv');
   await execute('git status');
-  await execute(`git config --global user.email ${email}`);
-  await execute(`git config --global user.name ${name}`);
+
+  // This avoids changing the email and name when doing local development
+  if (process.env.CI) {
+    await execute(`git config --global user.email ${email}`);
+    await execute(`git config --global user.name ${name}`);
+  }
+
   await execute(`git add .`);
   await execute(`git commit -am ${commitMessage}`);
 };
