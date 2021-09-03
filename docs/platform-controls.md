@@ -1,5 +1,5 @@
 ---
-title: Platform controls
+title: Overview
 id: platform-controls
 ---
 

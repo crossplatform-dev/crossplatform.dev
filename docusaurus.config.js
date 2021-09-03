@@ -23,7 +23,7 @@ module.exports = {
           type: 'doc',
           docId: 'types',
           position: 'left',
-          label: 'Types of technologies',
+          label: 'Technologies',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {

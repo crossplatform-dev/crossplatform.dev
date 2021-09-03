@@ -1,8 +1,9 @@
 ---
+title: Overview
 id: browser-engine
 ---
 
-# Overview
+# Browser engine
 
 Developers of this category use mainly HTML, CSS, and JavaScript to create their applications,
 which are executed on a "browser engine". There are currently 3 actively maintained browser engines:
