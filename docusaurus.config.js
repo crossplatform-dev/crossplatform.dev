@@ -41,6 +41,11 @@ module.exports = {
       textColor: '#091E42',
       isCloseable: false,
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false
+    }
     // footer: {
     //   style: 'dark',
     //   links: [
