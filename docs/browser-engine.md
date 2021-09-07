@@ -28,7 +28,7 @@ dynamically to any form factor, work offline, send notifications, and more.
 With all these new features and capabilities, browsers have had to evolve and become more like mini
 OSes, protecting users from malicious attacks and poorly written code.
 
-Tthe [most used ones][statcounter] are [Chrome] ([Chromium]), [Safari] ([WebKit]), and [Firefox]
+The [most used ones][statcounter] are [Chrome] ([Chromium]), [Safari] ([WebKit]), and [Firefox]
 ([Gecko]). But even though they all are considered modern engines, they are not the same. Even for
 the same browser there can be significant differences accross platforms (more notably on iOS where
 they are force to be a wrapper around the WebKit's WebView).
