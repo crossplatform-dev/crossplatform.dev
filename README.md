@@ -6,6 +6,13 @@ This repository contains the code and contents of https://crossplatform.dev.
 
 It is built using [Docusaurus 2](https://docusaurus.io/) and deployed on Netlify.
 
+Table of contents:
+
+* [Installation](#installation)
+* [Local development](#local-development)
+* [Writing code examples](#writing-code-examples)
+* [Adding a new technology](#adding-a-new-technology)
+
 ## Installation
 
 To install it locally, you will need to:
@@ -47,6 +54,58 @@ npm start
 Most changes, like markdown modifications, `sidebars.js`, etc. are
 reflected live without having to restart the server.
 
+## Writing code examples
+
+The website also has a couple remark plugins that make it easier to have examples side by side.
+They live under the [`/src/transformers`][transformers] folder:
+
+- `import-code` allows you to reference a code file an "import" it automatically when building
+  the website. This is useful to separate the code from the text. You can use it as follows:
+
+  ````md
+  Look at this JavaScript code:
+
+  ```js (./path/to/code.js)
+  ```
+  ````
+
+  The contents of `./path/to/code.js` will be loaded and place inside the codeblock using the
+  indicated language. There is no need to have any content in the codeblock.
+
+- `partial-content` allows you to include the contents of a markdown file into another file. That
+  way you can have a markdown file per technology:
+
+  ```md
+  # This is an example
+
+  {@import ./path/to/example.pmd}
+  ```
+
+  Although the extension is `.pmd` (Partial MarkDown), the contents are the same as a regular
+  markdown file. The reason to change the extension is to avoid building it with Docusaurus.
+  When using it in combination with [Docusaurus tabs] and writting MDX, you can end up with
+  something like the following:
+
+  ```jsx
+  import Tabs from '@theme/Tabs';
+  import TabItem from '@theme/TabItem';
+
+  <Tabs>
+    <TabItem value="electron" label="Electron" default>
+      {@import ./electron.pmd}
+    </TabItem>
+    <TabItem value="pwa" label="PWA">
+      {@import ./pwa.pmd}
+    </TabItem>
+    <TabItem value="wv2" label="WebView2">
+      {@import ./wv2.pmd}
+    </TabItem>
+  </Tabs>;
+   ```
+
+`partial-content` files can also make use of `import-code`.
+
+
 ## Adding a new technology
 
 To create a new technology overview, run the following command:
@@ -57,10 +116,10 @@ npm run add-technology
 
 You will be prompted the technology name and once provided:
 
-* a new folder will be created under `/docs/` with its name
-* the folder will have a few markdown files for you to complete
-* `sidebars.js` will be updated to include the new technology
-* a new file will be created under `/data/technologies/TECHNOLOGY.js`
+- a new folder will be created under `/docs/` with its name
+- the folder will have a few markdown files for you to complete
+- `sidebars.js` will be updated to include the new technology
+- a new file will be created under `/data/technologies/TECHNOLOGY.js`
   for you to complete
 
 ![video of "npm run add-technology" running](./static/img/add-technology.webp)
@@ -175,9 +234,10 @@ and it will generate a table using the property names of the 1st
 object as the column names, adding a new line per item in the Array:
 
 ```markdown
-| Version | Date |
-| --- | --- |
-| vX.Y.Z | 2021/10/01 |
+| Version | Date       |
+| ------- | ---------- |
+| vX.Y.Z  | 2021/10/01 |
+
 ...
 ```
 
@@ -191,10 +251,15 @@ and the output will be:
 
 ```markdown
 | Version |
-| --- |
-| vX.Y.Z |
+| ------- |
+| vX.Y.Z  |
+
 ...
 ```
 
+<!-- Reference links -->
+
+[Docusaurus tabs]: https://docusaurus.io/docs/markdown-features/tabs
 [git]: https://git-scm.com/downloads
 [node.js]: https://nodejs.org/en/download/
+[transformers]: https://github.com/crossplatform-dev/crossplatform.dev/tree/main/src/transformers
