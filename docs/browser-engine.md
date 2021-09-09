@@ -1,5 +1,4 @@
 ---
-title: Overview
 id: browser-engine
 ---
 
@@ -200,7 +199,6 @@ There are many strategies in here, each one with its pros and cons:
 [Safari]: https://www.apple.com/safari/
 [statcounter]: https://gs.statcounter.com/browser-market-share
 [Tauri]: https://tauri.studio/
-[Types of technologies]: ./types.md
 [V8]: https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 [WebKit]: https://webkit.org/
 [WebSockets]: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API

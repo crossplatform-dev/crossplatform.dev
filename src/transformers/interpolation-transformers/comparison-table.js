@@ -27,11 +27,16 @@ const generateTableHeader = (propertyKey, propertyValue, accessors) => {
 
   // TODO: take into account if subproperty is like `property1.property2`
   // right now it assumes it's just a direct descendant
-  const columns = Object.keys(source[accessors[0]]);
+  if (typeof source[accessors[0]] === 'string') {
+    header += ` ${prettify.header(accessors[0])}`;
+    separator += ` :---: |`;
+  } else {
+    const columns = Object.keys(source[accessors[0]]);
 
-  for (const column of columns) {
-    header += ` ${prettify.header(column)} |`;
-    separator += ` --- |`;
+    for (const column of columns) {
+      header += ` ${prettify.header(column)} |`;
+      separator += ` :---: |`;
+    }
   }
 
   return [header, separator];
@@ -45,15 +50,21 @@ const generateTableHeader = (propertyKey, propertyValue, accessors) => {
  */
 const generateTableContent = (data, accessors) => {
   // TODO: There's probably some check needed here
-  let line = `| ${data.name} | `;
+  let line = `| [${data.name}](${data.normalizedName}) | `;
+
   // TODO: take into account if subproperty is like `property1.property2`
   // right now it assumes it's just a direct descendant
   const property = accessors[0];
-  let columns = Object.keys(data[property]);
-  let information = data[property];
 
-  for (const column of columns) {
-    line += ` ${prettify.dateFormat(information[column])} |`;
+  if (typeof data[property] === 'string') {
+    line += ` ${prettify.dateFormat(data[property])}`;
+  } else if (typeof data[property] === 'object') {
+    let columns = Object.keys(data[property]);
+    let information = data[property];
+
+    for (const column of columns) {
+      line += ` ${prettify.dateFormat(information[column])} |`;
+    }
   }
 
   return line;

@@ -23,9 +23,15 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'types',
+          docId: 'technologies',
           position: 'left',
           label: 'Technologies',
+        },
+        {
+          type: 'doc',
+          docId: 'rendering',
+          position: 'left',
+          label: 'Rendering strategies',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {

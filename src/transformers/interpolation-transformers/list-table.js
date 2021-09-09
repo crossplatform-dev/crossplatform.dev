@@ -33,7 +33,7 @@ const generateTableHeader = (data, accessors) => {
 
   for (const column of columns) {
     header += ` ${prettify.header(column)} |`;
-    separator += ` --- |`;
+    separator += ` :---: |`;
   }
 
   return [header, separator];

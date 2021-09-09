@@ -1,6 +1,7 @@
 {
   "$schema": "../schemas/technology.json",
   "name": "React Native",
+  "normalizedName": "react-native",
   "platforms": {
     "Windows": "✅",
     "macOS": "✅",
@@ -15,6 +16,11 @@
     "Java": "",
     "JavaScript": "✅",
     "Rust": ""
+  },
+  "rendering": {
+    "Browser engine": "",
+    "Platform controls": "✅",
+    "Direct drawing": ""
   },
   "releases": [
     {
@@ -306,6 +312,7 @@
       "date": "2016-10-25T11:07:01Z"
     }
   ],
+  "codeLicense": "MIT",
   "url": "https://reactnative.dev/",
   "community": "https://discord.gg/JuTwWB8rsy",
   "documentation": "https://reactnative.dev/docs/getting-started"

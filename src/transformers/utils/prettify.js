@@ -3,20 +3,35 @@ const dayjs = require('dayjs');
 
 /**
  * Makes the word singular and capitalizes the first
- * letter of the string unless it contains capital
- * letters already.
+ * letter of the string unless it starts already with
+ * a capital letter. It also uncamelcases.
+ * Examples:
+ * * Android -> Android
+ * * macOS -> macOS
+ * * technologies -> Technology
+ * * codeLicense -> Code License
  * @param {string} title
  */
 const header = (title) => {
   let prettyTitle = title;
 
-  /**
-   * If the word has some capital letters
-   * we assume it's a name and no need to pretify
-   */
-  if (prettyTitle.match(/[A-Z]/) === null) {
-    prettyTitle = singular(prettyTitle).replace(/^\w/, (c) => c.toUpperCase());
+  // Starts with a capital letter like "Windows"
+  if (prettyTitle.match(/^[A-Z]/) !== null) {
+    return prettyTitle;
   }
+
+  const middleCapitalLetters = prettyTitle.match(/\w+?([A-Z]+)/);
+  const [, match] = middleCapitalLetters || [, ''];
+  const hasSeveralCapitalLetters = match.length >= 2;
+
+  // We do not want to modify if it is something like macOS or iOS
+  if (hasSeveralCapitalLetters) {
+    return prettyTitle;
+  }
+
+  prettyTitle = singular(prettyTitle)
+    .replace(/^\w/, (c) => c.toUpperCase())
+    .replace(/\w[A-Z]/, (c) => `${c[0]} ${c[1]}`);
 
   return prettyTitle;
 };

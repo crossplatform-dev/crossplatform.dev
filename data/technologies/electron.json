@@ -1,6 +1,7 @@
 {
   "$schema": "../schemas/technology.json",
   "name": "Electron",
+  "normalizedName": "electron",
   "platforms": {
     "Windows": "✅",
     "macOS": "✅",
@@ -15,6 +16,11 @@
     "Java": "",
     "JavaScript": "✅",
     "Rust": ""
+  },
+  "rendering": {
+    "Browser engine": "✅",
+    "Platform controls": "",
+    "Direct drawing": ""
   },
   "releases": [
     {
@@ -170,6 +176,7 @@
       "date": "2021-03-02T03:09:29Z"
     }
   ],
+  "codeLicense": "MIT",
   "url": "https://www.electronjs.org",
   "community": "https://discord.com/invite/electron",
   "documentation": "https://www.electronjs.org/docs/latest/"

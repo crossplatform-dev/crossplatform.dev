@@ -1,8 +1,8 @@
 ---
-title: Types of technologies
+title: Rendering strategies
 ---
 
-# Types of technologies
+# Rendering strategies
 
 There are many types of cross-platform technologies. At a high-level, they all work by exposing a
 common API to the developers and then taking care of the underlying specific code for each platform.

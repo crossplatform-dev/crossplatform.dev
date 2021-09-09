@@ -1,29 +1,11 @@
 module.exports = {
-  websiteSidebar: [
-    'types',
+  technologies: ['technologies', 'electron', 'webview2', 'react-native'],
+  rendering: [
+    'rendering',
     {
       type: 'category',
-      label: 'Browser engine',
-      items: [
-        'browser-engine',
-        'electron',
-        'webview2',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Platform controls',
-      items: [
-        'platform-controls',
-        'react-native',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Direct drawing',
-      items: [
-        'direct-drawing',
-      ],
+      label: 'Strategies',
+      items: ['browser-engine', 'platform-controls', 'direct-drawing'],
     },
   ],
 };

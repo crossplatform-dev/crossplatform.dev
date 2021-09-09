@@ -17,6 +17,7 @@ const SIDEBARS_PATH = path.join(__dirname, '..', 'sidebars.js');
 const TECHNOLOGY = {
   $schema: '../schemas/technology.json',
   name: '',
+  normalizedName: '',
   platforms: {
     Windows: '',
     macOS: '',
@@ -32,18 +33,28 @@ const TECHNOLOGY = {
     JavaScript: '',
     Rust: '',
   },
+  rendering: {
+    'Browser engine': '',
+    'Platform controls': '',
+    'Direct drawing': '',
+  },
   releases: [
     {
       version: '0.0.1',
       date: '2021-01-01T00:00:00Z',
     },
   ],
+  codeLicense: '',
   url: 'https://',
   community: 'https://',
   documentation: 'https://',
 };
 
-const categories = ['Browser engine', 'Direct drawing', 'Platform controls'];
+const renderingTypes = [
+  'Browser engine',
+  'Direct drawing',
+  'Platform controls',
+];
 
 /**
  * Listens for stdin and returns the first line of text received.
@@ -158,14 +169,16 @@ const start = async () => {
   const technology = await getInput();
   const normalizedTechnology = normalize(technology);
 
-  console.log(`Category? (${categories.join(', ')})`);
-  const category = await getInput();
+  console.log(
+    `What type of rendering does it use? (${renderingTypes.join(', ')})`
+  );
+  const rendering = await getInput();
 
-  if (!categories.includes(category)) {
-    console.error(`Category "${category}" is not valid. Please use one of the following ones the next time:
-${categories.join('\n')}`);
+  if (!renderingTypes.includes(rendering)) {
+    console.error(`Rendering type "${rendering}" is not valid. Please use one of the following ones the next time:
+${renderingTypes.join('\n')}`);
   }
-  const normalizedCategory = normalize(category);
+  const normalizedRendering = normalize(rendering);
 
   const templates = await loadTemplates('.md');
 
@@ -179,12 +192,12 @@ ${categories.join('\n')}`);
       value: normalizedTechnology,
     },
     {
-      key: 'category',
-      value: category,
+      key: 'rendering',
+      value: rendering,
     },
     {
-      key: 'normalizedCategory',
-      value: normalizedCategory,
+      key: 'normalizedRendering',
+      value: normalizedRendering,
     },
   ];
 
@@ -193,7 +206,12 @@ ${categories.join('\n')}`);
   console.log(`Documentation files created:
 ${createdFiles.join('\n')}`);
 
-  const json = { ...TECHNOLOGY, ...{ name: technology } };
+  const json = {
+    ...TECHNOLOGY,
+    ...{ name: technology, normalizedName: normalizedTechnology },
+  };
+
+  json.rendering[rendering] = '✅';
 
   await fs.writeFile(
     path.join(DATA_PATH, 'technologies', `${normalizedTechnology}.json`),
@@ -203,20 +221,24 @@ ${createdFiles.join('\n')}`);
 
   const sidebars = require(SIDEBARS_PATH);
 
-  const categoryItem = sidebars.websiteSidebar.find((item) => {
-    return item.label === category;
-  });
-
-  if (!categoryItem) {
-    console.error(
-      `There was an error adding the element to "sidebars.js" under the category ${category}, please do it manually`
-    );
-    process.exit(1);
-  }
-
   console.log(`Updating sidebars.js`);
 
-  categoryItem.items.push(normalizedTechnology);
+  sidebars.technologies = [
+    ...sidebars.technologies,
+    normalizedTechnology,
+  ].sort((technologyA, technologyB) => {
+    if (technologyA === 'technologies') {
+      return -1;
+    }
+    if (technologyB === 'technologies') {
+      return 1;
+    }
+    if (technologyA === technologyB) {
+      return 0;
+    }
+
+    return technologyA > technologyB ? 1 : -1;
+  });
 
   await fs.writeFile(
     SIDEBARS_PATH,

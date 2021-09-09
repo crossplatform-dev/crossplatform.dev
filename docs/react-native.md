@@ -29,6 +29,60 @@ can use [Grid] and [Flexbox] for layout on the web, but only the later on React 
 
 <!-- Talk about extensibility -->
 
+## Summary
+
+| Characteristic |        |
+| -------------- | :----: |
+| Website | [{{technologies.react-native.url}}]({{technologies.react-native.url}}) |
+| Platforms | Mobile, Desktop |
+| Rendering strategy | [Platform controls] |
+| Code License | [{{technologies.react-native.codeLicense}}] |
+| Copyright | Facebook |
+| Documentation | [{{technologies.react-native.documentation}}]({{technologies.react-native.documentation}}) |
+| Community | [{{technologies.react-native.community}}]({{technologies.react-native.community}}) |
+| Latest version | {{technologies.react-native.releases.0.version}} |
+| Release cadence | N/A |
+| Release support | Latest version |
+| Update model | Developer driven |
+| Governance model | Facebook is the ultimate decission maker |
+
+**Platform support:**
+
+{{ table technologies.react-native.platforms.{} }}
+
+:::caution
+Windows and macOS are considered out-of-tree platforms React Native platforms. Developers need to
+download the packages `react-native-windows` and/or `react-native-macos` (developed
+by Microsoft) to target them. You can learn more in [React Native for Windows + macOS][RN desktop].
+:::
+
+**Language support:**
+
+{{ table technologies.react-native.languages.{} }}
+
+## Release cadence, version support and update model
+
+While React Native does not have a fixed release cadence, the team's goal is to publish a new
+version every few months (3-6). On top of the stable releases, developers have also access to
+release candidate and nighlty builds.
+
+While usually only the latest published version is supported, during the `v0.62`-`v0.66` timeframe
+there have been updates to previous minor versions. For example, `v0.62.3` was released at the same
+time as `v0.64.1`.
+
+React Native applications are self-contained: the runtime is bundled into the application. This
+means that updating the React Native version is a developer responsibility (developer driven).
+
+:::caution
+Although React Native is a mature project, it has not reach v1. This means that any minor release
+can have breaking changes.
+:::
+
+## Governance
+
+While React Native is OSS ([MIT] licensed) and has contributors from different companies, the
+ultimate decission maker is Facebook.
+
 ## Internals
 
 In React Native apps, the application code is executed outside of the application main (UI) thread.
@@ -89,61 +143,6 @@ The following sources where used for this section:
 * [React Native Reanimated]
 :::
 
-## Release cadence, version support and update model
-
-While React Native does not have a fixed release cadence, the team's goal is to publish a new
-version every few months (3-6). On top of the stable releases, developers have also access to
-release candidate and nighlty builds.
-
-While usually only the latest published version is supported, during the `v0.62`-`v0.66` timeframe
-there have been updates to previous minor versions. For example, `v0.62.3` was released at the same
-time as `v0.64.1`.
-
-React Native applications are self-contained: the runtime is bundled into the application. This
-means that updating the React Native version is a developer responsibility (developer driven).
-
-:::caution
-Although React Native is a mature project, it has not reach v1. This means that any minor release
-can have breaking changes.
-:::
-
-## Governance
-
-While React Native is OSS ([MIT] licensed) and has contributors from different companies, the
-ultimate decission maker is Facebook.
-
-## Summary
-
-| Characteristic |        |
-| -------------- | :----: |
-| Website | [{{technologies.react-native.url}}]({{technologies.react-native.url}}) |
-| Platforms | Mobile, Desktop |
-| Type | [Platform controls] |
-| Software type | OSS |
-| License | [MIT] |
-| Copyright | Facebook |
-| Documentation | [{{technologies.react-native.documentation}}]({{technologies.react-native.documentation}}) |
-| Community | [{{technologies.react-native.community}}]({{technologies.react-native.community}}) |
-| Latest version | {{technologies.react-native.releases.0.version}} |
-| Release cadence | N/A |
-| Release support | Latest version |
-| Update model | Developer driven |
-| Governance model | Facebook is the ultimate decission maker |
-
-**Platform support:**
-
-{{ table technologies.react-native.platforms.{} }}
-
-:::caution
-Windows and macOS are considered out-of-tree platforms React Native platforms. Developers need to
-download the packages `react-native-windows` and/or `react-native-macos` (developed
-by Microsoft) to target them. You can learn more in [React Native for Windows + macOS][RN desktop].
-:::
-
-**Language support:**
-
-{{ table technologies.react-native.languages.{} }}
-
 <!-- Ref links -->
 
 [DOM]: https://en.wikipedia.org/wiki/Document_Object_Model
@@ -154,7 +153,7 @@ by Microsoft) to target them. You can learn more in [React Native for Windows + 
 [Grid]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
 [JSX]: https://reactjs.org/docs/introducing-jsx.html
 [Lorenzo Sciandra]: https://twitter.com/Kelset
-[MIT]: https://github.com/facebook/react-native/blob/main/LICENSE
+[{{technologies.react-native.codeLicense}}]: https://github.com/facebook/react-native/blob/main/LICENSE
 [MS RN]: https://twitter.com/safaiyeh/status/1219294459298344961
 [Pinterest RN]: https://medium.com/pinterest-engineering/supporting-react-native-at-pinterest-f8c2233f90e6
 [Platform controls]: ./platform-controls.md

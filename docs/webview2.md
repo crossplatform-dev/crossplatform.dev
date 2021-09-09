@@ -14,6 +14,35 @@ Its first production ready release was in [October 2020][WebView2 GA Blog]. Sinc
 of the most relevant applications and companies that have adopted it are Microsoft Office, Outlook,
 and [Morgan Stanley].
 
+## Summary
+
+| Characteristic |        |
+| -------------- | :----: |
+| Website | [{{technologies.webview2.url}}]({{technologies.webview2.url}}) |
+| Platforms | Desktop |
+| Rendering strategy | [Browser engine] |
+| Code License | [{{technologies.webview2.codeLicense}}] |
+| Copyright | Microsoft |
+| Documentation | [{{technologies.webview2.documentation}}]({{technologies.webview2.documentation}}) |
+| Community | [{{technologies.webview2.community}}]({{technologies.webview2.community}}) |
+| Latest version | {{technologies.webview2.releases.0.version}} |
+| Release cadence | Major versions: not scheduled <br/> Minor/patch: 6 weeks |
+| Release support | 6 weeks |
+| Update model | [Evergreen or fixed][WebView2_DistributionDoc] |
+| Governance model | Microsoft driven |
+
+**Platform support:**
+
+{{ table technologies.webview2.platforms.{} }}
+
+:::note
+[UWP] and macOS support coming soon!
+:::
+
+**Language support:**
+
+{{ table technologies.webview2.languages.{} }}
+
 ## Release cadence, version support and update model
 
 There are 2 parts to WebView2:
@@ -49,36 +78,6 @@ WebView2 is developed by Microsoft, and built on top of the Edge browser platfor
 source and developers can provide feedback via this
 [GitHub repository]({{technologies.webview2.community}}).
 
-## Summary
-
-| Characteristic |        |
-| -------------- | :----: |
-| Website | [{{technologies.webview2.url}}]({{technologies.webview2.url}}) |
-| Platforms | Desktop |
-| Type | [Browser engine] |
-| Software type | Close source |
-| License | https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.430/License |
-| Copyright | Microsoft |
-| Documentation | [{{technologies.webview2.documentation}}]({{technologies.webview2.documentation}}) |
-| Community | [{{technologies.webview2.community}}]({{technologies.webview2.community}}) |
-| Latest version | {{technologies.webview2.releases.0.version}} |
-| Release cadence | Major versions: not scheduled <br/> Minor/patch: 6 weeks |
-| Release support | 6 weeks |
-| Update model | [Evergreen or fixed][WebView2_DistributionDoc] |
-| Governance model | Microsoft driven |
-
-**Platform support:**
-
-{{ table technologies.webview2.platforms.{} }}
-
-:::note
-[UWP] and macOS support coming soon!
-:::
-
-**Language support:**
-
-{{ table technologies.webview2.languages.{} }}
-
 <!-- Ref links -->
 
 [Browser engine]: ./browser-engine.md
@@ -90,3 +89,4 @@ source and developers can provide feedback via this
 [WebView2 SDK]: https://www.nuget.org/packages/Microsoft.Web.WebView2
 [WebView2 Runtime]: https://developer.microsoft.com/en-us/microsoft-edge/webview2/
 [WebView2_DistributionDoc]: https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?view=webview2-1.0.864.35
+[{{technologies.webview2.codeLicense}}]: https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.430/License

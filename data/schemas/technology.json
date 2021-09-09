@@ -43,6 +43,14 @@
         }
       }
     },
+    "rendering": {
+      "type": "object",
+      "properties": {
+        "Browser engine": { "$ref": "#/$defs/support" },
+        "Platform controls": { "$ref": "#/$defs/support" },
+        "Direct drawing": { "$ref": "#/$defs/support" }
+      }
+    },
     "website": {
       "type": "string",
       "format": "uri",
@@ -51,14 +59,24 @@
     "properties": {
       "$schema": { "type": "string" },
       "name": { "type": "string" },
+      "normalizedName": { "type": "string" },
       "platforms": { "$ref": "#/$defs/platforms" },
       "languages": { "$ref": "#/$defs/languages" },
+      "codeLicense": { "type": "string" },
       "url": { "$ref": "#/$defs/website" },
       "community": { "$ref": "#/$defs/website" },
       "documentation": { "$ref": "#/$defs/website" },
       "releases": { "$ref": "#/$defs/releases" }
     },
     "additionalProperties": false,
-    "required": ["name", "platforms", "languages", "releases", "url"]
+    "required": [
+      "name",
+      "normalizedName",
+      "platforms",
+      "languages",
+      "codeLicense",
+      "releases",
+      "url"
+    ]
   }
 }

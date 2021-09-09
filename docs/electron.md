@@ -22,6 +22,41 @@ support. At a high-level, [Electron adds the Node.js layer to Chromium's JavaScr
 V8][electron-node]. This means that developers can leverate all its ecosystem and also write C/C++
 code to access features not available out of the box or via other modules.
 
+## Summary
+
+| Characteristic |        |
+| :------------- | :----: |
+| Website | [{{technologies.electron.url}}]({{technologies.electron.url}}) |
+| Platforms | Desktop |
+| Rendering strategy | [Browser engine] |
+| Code License | [{{technologies.electron.codeLicense}}] |
+| Copyright | [OpenJS Foundation][electron-foundation] |
+| Documentation | [{{technologies.electron.documentation}}]({{technologies.electron.documentation}}) |
+| Community | [{{technologies.electron.community}}]({{technologies.electron.community}}) |
+| Latest version | {{technologies.electron.releases.0.version}} |
+| Release cadence | Major versions: [12 weeks][release timeline] <br/> Minor/patch: ~weekly |
+| Release support | [9 months][release timeline] |
+| Update model | Developer driven |
+| Governance model | [Open Governance] |
+
+**Platform support:**
+
+{{ table technologies.electron.platforms.{} }}
+
+:::note
+While a mobile Electron could be possible, the [Apple Store policy 2.5.6] will prevent it from being
+distributed on iOS devices.
+:::
+
+**Language support:**
+
+{{ table technologies.electron.languages.{} }}
+
+:::note
+While this list is for the "out of the box" languages, there are ways to use others. An example
+would be Rust, which can be run via [Neon].
+:::
+
 ## Release cadence, version support and update model
 
 Electron has three important branches of development: nightly, beta, and stable. The nightly branch
@@ -60,42 +95,6 @@ While the requirements might change from one WG to another, anyone can eventuall
 maintainer, join, and get their feature added. Electron is created to serve its community, and not
 the needs of a particular company or product.
 
-## Summary
-
-| Characteristic |        |
-| :------------- | :----: |
-| Website | [{{technologies.electron.url}}]({{technologies.electron.url}}) |
-| Platforms | Desktop |
-| Type | [Browser engine] |
-| Software type | OSS |
-| License | [MIT] |
-| Copyright | [OpenJS Foundation][electron-foundation] |
-| Documentation | [{{technologies.electron.documentation}}]({{technologies.electron.documentation}}) |
-| Community | [{{technologies.electron.community}}]({{technologies.electron.community}}) |
-| Latest version | {{technologies.electron.releases.0.version}} |
-| Release cadence | Major versions: [12 weeks][release timeline] <br/> Minor/patch: ~weekly |
-| Release support | [9 months][release timeline] |
-| Update model | Developer driven |
-| Governance model | [Open Governance] |
-
-**Platform support:**
-
-{{ table technologies.electron.platforms.{} }}
-
-:::note
-While a mobile Electron could be possible, the [Apple Store policy 2.5.6] will prevent it from being
-distributed on iOS devices.
-:::
-
-**Language support:**
-
-{{ table technologies.electron.languages.{} }}
-
-:::note
-While this list is for the "out of the box" languages, there are ways to use others. An example
-would be Rust, which can be run via [Neon].
-:::
-
 <!-- Ref links -->
 
 [Apple Store policy 2.5.6]: https://developer.apple.com/app-store/review/guidelines/
@@ -105,7 +104,7 @@ would be Rust, which can be run via [Neon].
 [electron-node]: https://www.electronjs.org/blog/electron-internals-using-node-as-a-library
 [Figma]: https://www.figma.com/
 [InVision]: https://www.invisionapp.com/
-[MIT]: https://github.com/electron/electron/blob/main/LICENSE
+[technologies.electron.codeLicense]: https://github.com/electron/electron/blob/main/LICENSE
 [Neon]: https://github.com/neon-bindings/neon
 [Node.js]: https://nodejs.org
 [Open Governance]: https://github.com/electron/governance
