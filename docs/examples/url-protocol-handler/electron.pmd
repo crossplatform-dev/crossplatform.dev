@@ -1,0 +1,49 @@
+To register a custom protocol in your Electron application you can use the
+[`setAsDefaultProtocolClient`][protocol] method of the [`app`][app] module.
+
+```js {4}
+const { app } = require('electron');
+
+app.whenReady().then(() => {
+  app.setAsDefaultProtocolClient('mycustomprotocol');
+});
+```
+
+Once registered, your application will be opened anytime a user interacts with a link
+similar to `mycustomprotocol://custom/path`. How the application access the URI is
+different depending on the platform.
+
+For macOS is via the [`open-url`][open-url] event
+
+```js
+const { app } = require('electron');
+
+app.on('open-url', (event, url) => {
+  // Your code handling here
+});
+```
+
+On Windows the URI is passed as part of the arguments (`process.argv`) when starting the
+application. Because the position could change, it is recommended to iterate to find the
+right one. An optimistic implementation would be:
+
+```js
+const protocolArg = process.argv.find((arg) => arg.startsWith('mycustomprotocol://'));
+if(!protocolArg){
+  return;
+}
+
+// Your code handling here
+```
+
+:::caution
+Depending on the platform there might be some extra steps to do (like add the protocol to
+the app's `info.plist` on macOS). Make sure to read the [official documentation][protocol].
+:::
+
+Contrary to the PWA case, there are no limitations on the name of the protocol, thus
+why the name is `mycustomprotocol` and not `web+mycustomprotocol`.
+
+[app]: https://www.electronjs.org/docs/latest/api/app/
+[open-url]: https://www.electronjs.org/docs/latest/api/app/#event-open-url-macos
+[protocol]: https://www.electronjs.org/docs/latest/api/app/#appsetasdefaultprotocolclientprotocol-path-args

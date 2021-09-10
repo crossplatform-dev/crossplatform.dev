@@ -92,16 +92,25 @@ They live under the [`/src/transformers`][transformers] folder:
 
   <Tabs>
     <TabItem value="electron" label="Electron" default>
+
       {@import ./electron.pmd}
+
     </TabItem>
     <TabItem value="pwa" label="PWA">
+
       {@import ./pwa.pmd}
+
     </TabItem>
     <TabItem value="wv2" label="WebView2">
+
       {@import ./wv2.pmd}
+
     </TabItem>
   </Tabs>;
    ```
+
+**CAUTION:** It is important to leave a blank link before and after `{@import}, otherwise it
+will not work.
 
 `partial-content` files can also make use of `import-code`.
 

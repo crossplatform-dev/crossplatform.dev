@@ -17,7 +17,7 @@
 | Run on OS login | | | | |
 | Serial access |✅ | | | |
 | URL handler | | | | |
-| URL protocol handler | | | | |
+| [URL protocol handler](/docs/examples/url-protocol-handler) | | | | |
 | USB access | | | | |
 | Using local fonts | | | | |
 | Video codecs | | | | |

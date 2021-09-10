@@ -34,6 +34,12 @@ module.exports = {
           position: 'left',
           label: 'Rendering strategies',
         },
+        {
+          type:'doc',
+          docId: 'examples',
+          position: 'left',
+          label: 'Examples'
+        },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/crossplatform-dev/crossplatform.dev',
