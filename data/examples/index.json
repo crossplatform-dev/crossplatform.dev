@@ -423,8 +423,8 @@
     "name": "URL protocol handler",
     "electron": {
       "gist": "",
-      "status": "",
-      "documentation": ""
+      "status": "✅",
+      "documentation": "https://www.electronjs.org/docs/latest/tutorial/launch-app-from-url-in-another-app"
     },
     "pwa": {
       "gist": "",

@@ -1,0 +1,39 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import LaunchButton from '../../src/components/LaunchButton';
+
+# URL protocol handler
+
+It's fairly common to find web pages link to resources using non-http protocols. An example is the `mailto:` protocol:
+
+```html
+<a href="mailto:webmaster@example.com">Web Master</a>
+```
+
+You might want your application to become the handler for a particular protocol well-known protocol (if you are an email
+application, for example) or even create your own custom protocol to handle links that navigate to particular
+places or states in your application. This is particularly useful when sharing some content with contacts and a common
+scenario many applications need to implement.
+
+## Implementation
+
+<Tabs>
+  <TabItem value="electron" label="Electron" default>
+
+{@import ./url-protocol-handler/electron.pmd}
+
+If you have Fiddle installed, you can run a full example by clicking the following button:
+<LaunchButton url="https://fiddle.electronjs.org/launch?target=electron/v14.0.1/docs/fiddles/system/protocol-handler/launch-app-from-URL-in-another-app"></LaunchButton>
+
+  </TabItem>
+  <TabItem value="pwa" label="PWA">
+
+{@import ./url-protocol-handler/pwa.pmd}
+
+  </TabItem>
+  <TabItem value="wv2" label="WebView2">
+
+{@import ./url-protocol-handler/webview2.pmd}
+
+  </TabItem>
+</Tabs>

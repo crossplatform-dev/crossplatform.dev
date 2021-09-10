@@ -1,0 +1,50 @@
+When building a PWA there are 2 ways to register the applications as a protocol handler:
+
+The first one is specifying the `protocol_handlers` property in the [Web app manifest] of the PWA:
+
+```json {12-17}
+{
+  "name": "My PWA",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  //...
+  "protocol_handlers": [
+    {
+      "protocol": "web+mycustomprotocol",
+      "url": "index.html?custom=%s"
+    }
+  ]
+}
+```
+
+Or you can do it programatically via JavaScript calling
+`navigator.registerProtocolHandler`:
+
+```js {2}
+document.addEventListener('DOMContentLoaded', (event) => {
+  navigator.registerProtocolHandler('web+mycustomprotocol', 'index.html?custom=%s');
+})
+```
+
+The value of the protocol can be one of the following 2 options:
+
+1. One of the [safelisted schemes]
+1. Or begin with `web+` followed by at least one or more lowercase ASCII letters
+
+You can learn more in [this article in web.dev][web.dev].
+
+:::caution
+This feature is currently being tested in Chromium browsers. Websites can opt-in via
+[origin trials]
+:::
+
+[origin trials]: https://developer.chrome.com/origintrials/#/view_trial/1136033006004207617
+[safelisted schemes]: https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme
+[web.dev]: https://web.dev/url-protocol-handler/
+[Web app manifest]: https://web.dev/add-manifest/

@@ -181,12 +181,12 @@ const normalizeStatus = (status) => {
     // TODO: Check if it has been merged
     return '🛠';
   }
-  if(status.includes('crbug')){
+  if (status.includes('crbug')) {
     // TODO: Get the resolution of the issue via Playwright because x-xsrf-token and other stuff :(
     return 'TBD';
   }
 
-  return '❓';
+  return status;
 };
 
 /**
@@ -201,14 +201,13 @@ const technologyStateMarkdown = (technology) => {
   }
 
   if (technology.status) {
+    let status = normalizeStatus(technology.status);
+
     if (technology.documentation) {
       // TODO: Resolve status links from crbug
-      return `[${normalizeStatus(technology.status)}](${
-        technology.documentation
-      })`;
-    } else {
-      return normalizeStatus(technology.status);
+      status += ` ([Docs](${technology.documentation}))`;
     }
+    return status;
   } else {
     return '';
   }

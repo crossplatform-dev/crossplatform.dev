@@ -1,0 +1,103 @@
+As mentioned in [its page][wv2], WebView2 is available on Windows platforms and can be used from C#
+on a WPF or WinForms application, or in a Win32 with C++.
+
+:::caution
+While the macOS version of WebView2 is in development, there is no preview available. That said,
+registering the application to handle a custom protocol will require calling to OS APIs the same
+way it is done on Windows.
+:::
+
+To handle the
+On a WPF application the URL is passed as part of the parameters when invoking it so you have to
+look for it:
+
+```csharp
+class Program
+{
+  [STAThread]
+  static void Main(string[] args)
+  {
+    if (args != null && args.Length > 0)
+    {
+      if (args[0].StartsWith("mycustomprotocol://"))
+      {
+        //handle URI activation
+      }
+
+      App application = new App();
+      application.InitializeComponent();
+      application.Run();
+  }
+}
+```
+
+If you are using it on a Win32 application with C++, then your could will look similar to:
+
+```cpp
+// Parameters are assumed to be valid
+
+HRESULT GetPropVariantForUrlAndTime
+    (PCWSTR pszUrl, const FILETIME &ftLastModified, PROPVARIANT **ppPropValue)
+{
+    *ppPropValue = NULL;
+
+    // Allocate the propvariant pointer.
+    size_t const cbAlloc = sizeof(**ppPropValue);
+    *ppPropValue = (PROPVARIANT *)CoTaskMemAlloc(cbAlloc));
+
+    HRESULT hr = *ppPropValue ? S_OK : E_OUTOFMEMORY;
+
+    if (SUCCEEDED(hr))
+    {
+        PropVariantInit(*ppPropValue);  // Zero init the value
+
+        // Now allocate enough memory for 2 nested PropVariants.
+        // PKEY_Search_UrlToIndexWithModificationTime is an array of two PROPVARIANTs.
+        PROPVARIANT *pVector = (PROPVARIANT *)CoTaskMemAlloc(sizeof(*pVector) * 2);
+        hr = pVector ? S_OK : E_OUTOFMEMORY;
+
+        if (SUCCEEDED(hr))
+        {
+            // Set the container PROPVARIANT to be a vector of two PROPVARIANTS.
+            (*ppPropValue)->vt = VT_VARIANT | VT_VECTOR;
+            (*ppPropValue)->capropvar.cElems = 2;
+            (*ppPropValue)->capropvar.pElems = pVector;
+            PWSTR pszUrlAlloc;
+            hr = SHStrDup(pszUrl, &pszUrlAlloc);
+
+            if (SUCCEEDED(hr))
+            {
+                // Now fill the array of PROPVARIANTS.
+                // Put the pointer to the URL into the vector.
+                (*ppPropValue)->capropvar.pElems[0].vt = VT_LPWSTR;
+                (*ppPropValue)->capropvar.pElems[0].pwszVal = pszUrlAlloc;
+
+                 // Put the FILETIME into vector.
+                (*ppPropValue)->capropvar.pElems[1].vt = VT_FILETIME;
+                (*ppPropValue)->capropvar.pElems[1].filetime = ftLastModified;
+            }
+
+            else
+            {
+                CoTaskMemFree(pVector);
+            }
+        }
+
+        if (FAILED(hr))
+        {
+            CoTaskMemFree(*ppPropValue);
+            *ppPropValue = NULL;
+        }
+    }
+    return S_OK;
+}
+```
+
+:::info
+Depending on how your application is packaged and distributed (i.e.: MSIX, squirrel, etc.) you might
+have to do some extra steps like modifying the registry or a manifest.
+:::
+You can read more in [Installing and Registering Protocol Handlers].
+
+[Installing and Registering Protocol Handlers]: https://docusaurus.io/docs/markdown-features/admonitions
+[wv2]: /docs/webview2

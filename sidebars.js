@@ -8,4 +8,5 @@ module.exports = {
       items: ['browser-engine', 'platform-controls', 'direct-drawing'],
     },
   ],
+  examples: ['examples', 'examples/url-protocol-handler'],
 };
