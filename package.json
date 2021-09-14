@@ -52,7 +52,7 @@
     "markdownlint": "^0.24.0",
     "markdownlint-cli": "^0.28.1",
     "pluralize": "^8.0.0",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.0",
     "semver": "^7.3.5",
     "unist-util-visit-children": "^1.1.4"
   }
