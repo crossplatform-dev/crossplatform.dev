@@ -8,7 +8,7 @@ title: React Native
 by Facebook. While it is really popular among mobile platforms, developers can also target Windows
 and macOS (more about this later).
 React Native is used not only at Facebook, but also at other large companies such as
-[Microsoft][MS RN], [Shopify][Shopify RN], and [Pinterest][Pinterest RN].
+[Microsoft][ms rn], [Shopify][shopify rn], and [Pinterest][pinterest rn].
 
 To better understand how React Native works we should look at [React], a JavaScript library
 developed by Facebook for building user interfaces. React uses a Virtual DOM (VDOM), a
@@ -18,7 +18,7 @@ maps the elements of the UI to platform controls instead of the browser DOM. Thi
 to reuse their React web skills to create applications. Its moto is “Learn once, write anywhere”.
 
 :::info
-The [Document Object Model (DOM)][DOM] is a concept from the web browsers. The DOM treats an HTML
+The [Document Object Model (DOM)][dom] is a concept from the web browsers. The DOM treats an HTML
 document as a tree structure wherein each node is an object representing a part of the document.
 While React Native uses the concept of VDOM, there is no "real" DOM in React Native.
 :::
@@ -31,20 +31,20 @@ can use [Grid] and [Flexbox] for layout on the web, but only the later on React 
 
 ## Summary
 
-| Characteristic |        |
-| -------------- | :----: |
-| Website | [{{technologies.react-native.url}}]({{technologies.react-native.url}}) |
-| Platforms | Mobile, Desktop |
-| Rendering strategy | [Platform controls] |
-| Code License | [{{technologies.react-native.codeLicense}}] |
-| Copyright | Facebook |
-| Documentation | [{{technologies.react-native.documentation}}]({{technologies.react-native.documentation}}) |
-| Community | [{{technologies.react-native.community}}]({{technologies.react-native.community}}) |
-| Latest version | {{technologies.react-native.releases.0.version}} |
-| Release cadence | N/A |
-| Release support | Latest version |
-| Update model | Developer driven |
-| Governance model | Facebook is the ultimate decission maker |
+| Characteristic     |                                                                                                 |
+| ------------------ | :---------------------------------------------------------------------------------------------: |
+| Website            |             [{{technologies.react-native.url}}]({{technologies.react-native.url}})              |
+| Platforms          |                                         Mobile, Desktop                                         |
+| Rendering strategy |                                       [Platform controls]                                       |
+| Code License       | [{{technologies.react-native.codeLicense.name}}]({{technologies.react-native.codeLicense.url}}) |
+| Copyright          |                                            Facebook                                             |
+| Documentation      |   [{{technologies.react-native.documentation}}]({{technologies.react-native.documentation}})    |
+| Community          |       [{{technologies.react-native.community}}]({{technologies.react-native.community}})        |
+| Latest version     |                        {{technologies.react-native.releases.0.version}}                         |
+| Release cadence    |                                               N/A                                               |
+| Release support    |                                         Latest version                                          |
+| Update model       |                                        Developer driven                                         |
+| Governance model   |                            Facebook is the ultimate decission maker                             |
 
 **Platform support:**
 
@@ -53,7 +53,7 @@ can use [Grid] and [Flexbox] for layout on the web, but only the later on React 
 :::caution
 Windows and macOS are considered out-of-tree platforms React Native platforms. Developers need to
 download the packages `react-native-windows` and/or `react-native-macos` (developed
-by Microsoft) to target them. You can learn more in [React Native for Windows + macOS][RN desktop].
+by Microsoft) to target them. You can learn more in [React Native for Windows + macOS][rn desktop].
 :::
 
 **Language support:**
@@ -80,8 +80,9 @@ can have breaking changes.
 
 ## Governance
 
-While React Native is OSS ([MIT] licensed) and has contributors from different companies, the
-ultimate decission maker is Facebook.
+While React Native is OSS
+[{{technologies.react-native.codeLicense.name}}]({{technologies.react-native.codeLicense.url}})
+licensed) and has contributors from different companies, the ultimate decission maker is Facebook.
 
 ## Internals
 
@@ -124,13 +125,13 @@ again over the bridge.
 <!-- Diagram of messages being sent -->
 
 To address some of the concerns lined out earlier, the React Native Core team is working on removing
-the “bridge” and replace it with a [new renderer][Fabric], called Fabric, and a new mechanism to
+the “bridge” and replace it with a [new renderer][fabric], called Fabric, and a new mechanism to
 communicate the JavaScript thread with native modules, called TurboModules.
 This will allow, among other things, opt-in synchronous actions between the JavaScript thread and
 the UI and native modules.
 
 :::tip
-In [July 2021][Facebook fabric] Facebook announced that all its screens are using Fabric already. It
+In [July 2021][facebook fabric] Facebook announced that all its screens are using Fabric already. It
 is expected this feature will be enabled in the React Native's open source version in the near
 future.
 :::
@@ -138,30 +139,30 @@ future.
 :::note
 The following sources where used for this section:
 
-* [React Native Guide]
-* [The New React Native Architecture Explained: Part Three] by [Lorenzo Sciandra]
-* [React Native Reanimated]
-:::
+- [React Native Guide]
+- [The New React Native Architecture Explained: Part Three] by [Lorenzo Sciandra]
+- [React Native Reanimated]
+  :::
 
 <!-- Ref links -->
 
-[DOM]: https://en.wikipedia.org/wiki/Document_Object_Model
-[Embedded browser engine]: ./browser-engine.md#embedded-browser-engine
-[Facebook Fabric]: https://twitter.com/joshuaisgross/status/1415099495285608453
-[Fabric]: https://reactnative.dev/blog/2018/06/14/state-of-react-native-2018
-[Flexbox]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/GridsS_layout/Flexbox
-[Grid]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
-[JSX]: https://reactjs.org/docs/introducing-jsx.html
-[Lorenzo Sciandra]: https://twitter.com/Kelset
-[{{technologies.react-native.codeLicense}}]: https://github.com/facebook/react-native/blob/main/LICENSE
-[MS RN]: https://twitter.com/safaiyeh/status/1219294459298344961
-[Pinterest RN]: https://medium.com/pinterest-engineering/supporting-react-native-at-pinterest-f8c2233f90e6
-[Platform controls]: ./platform-controls.md
-[React]: https://reactjs.org/
-[React Native]: https://reactnative.dev
-[React Native Guide]: https://www.reactnative.guide/3-react-native-internals/3.1-react-native-internals.html
-[React Native Reanimated]: https://docs.swmansion.com/react-native-reanimated/docs/
-[RN desktop]: https://microsoft.github.io/react-native-windows/
-[RN code]: https://github.com/facebook/react-native
-[Shopify RN]: https://engineering.shopify.com/blogs/engineering/react-native-future-mobile-shopify
-[The New React Native Architecture Explained: Part Three]: https://formidable.com/blog/2019/fabric-turbomodules-part-3/
+[dom]: https://en.wikipedia.org/wiki/Document_Object_Model
+[embedded browser engine]: ./browser-engine.md#embedded-browser-engine
+[facebook fabric]: https://twitter.com/joshuaisgross/status/1415099495285608453
+[fabric]: https://reactnative.dev/blog/2018/06/14/state-of-react-native-2018
+[flexbox]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/GridsS_layout/Flexbox
+[grid]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
+[jsx]: https://reactjs.org/docs/introducing-jsx.html
+[lorenzo sciandra]: https://twitter.com/Kelset
+[{{technologies.react-native.codelicense}}]: https://github.com/facebook/react-native/blob/main/LICENSE
+[ms rn]: https://twitter.com/safaiyeh/status/1219294459298344961
+[pinterest rn]: https://medium.com/pinterest-engineering/supporting-react-native-at-pinterest-f8c2233f90e6
+[platform controls]: ./platform-controls.md
+[react]: https://reactjs.org/
+[react native]: https://reactnative.dev
+[react native guide]: https://www.reactnative.guide/3-react-native-internals/3.1-react-native-internals.html
+[react native reanimated]: https://docs.swmansion.com/react-native-reanimated/docs/
+[rn desktop]: https://microsoft.github.io/react-native-windows/
+[rn code]: https://github.com/facebook/react-native
+[shopify rn]: https://engineering.shopify.com/blogs/engineering/react-native-future-mobile-shopify
+[the new react native architecture explained: part three]: https://formidable.com/blog/2019/fabric-turbomodules-part-3/

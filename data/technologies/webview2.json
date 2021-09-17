@@ -100,7 +100,10 @@
       "date": "2020-04-20T18:21:06.3408502+00:00"
     }
   ],
-  "codeLicense": "Close",
+  "codeLicense": {
+    "name": "Close source",
+    "url": "https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.430/License"
+  },
   "url": "https://developer.microsoft.com/en-us/microsoft-edge/webview2/",
   "community": "https://github.com/MicrosoftEdge/WebView2Feedback",
   "documentation": "https://docs.microsoft.com/en-us/microsoft-edge/webview2/"

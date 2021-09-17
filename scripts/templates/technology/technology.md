@@ -13,27 +13,29 @@ some of the key characteristics for developers, etc. -->
 
 ## Summary
 
-| Characteristic |        |
-| -------------- | :----: |
-| Website | [{{technologies.${normalizedTechnology}.url}}]({{technologies.${normalizedTechnology}.url}}) |
-| Platforms | <!-- ✍ Desktop, mobile --> |
-| Rendering strategy | [${rendering}] |
-| Code License | [{{technologies.${normalizedTechnology}.codeLicense}}] |
-| Copyright | <!-- ✍ Who owns the ©? A company? Foundation? --> |
-| Documentation | [{{technologies.${normalizedTechnology}.documentation}}]({{technologies.${normalizedTechnology}.documentation}}) |
-| Community | [{{technologies.${normalizedTechnology}.community}}]({{technologies.${normalizedTechnology}.community}}) |
-| Latest version | {{technologies.${normalizedTechnology}.releases.0.version}} |
-| Release cadence | Major versions: <!-- ✍ XX weeks/months --> <br/> Minor/patch: <!-- ✍ XX weeks/months --> |
-| Release support | <!-- ✍ XX weeks/months --> |
-| Update model | <!-- ✍ Does the developer need to update their framework/runtime or is it automatic? --> |
-| Governance model | <!-- ✍ Does a company decide everything or is it an open governance model --> |
+| Characteristic     |                                                                                                                       |
+| ------------------ | :-------------------------------------------------------------------------------------------------------------------: |
+| Website            |             [{{technologies.${normalizedTechnology}.url}}]({{technologies.${normalizedTechnology}.url}})              |
+| Platforms          |                                              <!-- ✍ Desktop, mobile -->                                              |
+| Rendering strategy |                                                    [${rendering}]                                                     |
+| Code License       | [{{technologies.${normalizedTechnology}.codeLicense.name}}]({{technologies.${normalizedTechnology}.codeLicense.url}}) |
+| Copyright          |                                  <!-- ✍ Who owns the ©? A company? Foundation? -->                                   |
+| Documentation      |   [{{technologies.${normalizedTechnology}.documentation}}]({{technologies.${normalizedTechnology}.documentation}})    |
+| Community          |       [{{technologies.${normalizedTechnology}.community}}]({{technologies.${normalizedTechnology}.community}})        |
+| Latest version     |                              {{technologies.${normalizedTechnology}.releases.0.version}}                              |
+| Release cadence    |              Major versions: <!-- ✍ XX weeks/months --> <br/> Minor/patch: <!-- ✍ XX weeks/months -->               |
+| Release support    |                                              <!-- ✍ XX weeks/months -->                                              |
+| Update model       |               <!-- ✍ Does the developer need to update their framework/runtime or is it automatic? -->               |
+| Governance model   |                    <!-- ✍ Does a company decide everything or is it an open governance model -->                     |
 
 **Platform support:**
 
 {{ table technologies.${normalizedTechnology}.platforms.{} }}
 
 :::note
+
 <!-- ✍ write down any additional notes about platforms here or delete this part -->
+
 :::
 
 **Language support:**
@@ -41,7 +43,9 @@ some of the key characteristics for developers, etc. -->
 {{ table technologies.${normalizedTechnology}.languages.{} }}
 
 :::note
+
 <!-- ✍ write down any additional notes about languages here or delete this part -->
+
 :::
 
 ## Release cadence, version support and update model
@@ -58,4 +62,3 @@ foundation, company driven, etc. -->
 <!-- Ref links -->
 
 [${rendering}]: ./${normalizedRendering}.md
-[{{technologies.${normalizedTechnoligy}.codeLicense}}]: <!-- ✍ Link to the code license -->

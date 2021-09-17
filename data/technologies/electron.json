@@ -188,7 +188,10 @@
       "date": "2021-03-02T03:09:29Z"
     }
   ],
-  "codeLicense": "MIT",
+  "codeLicense": {
+    "name": "MIT",
+    "url": "https://github.com/electron/electron/blob/6fdf350bea8ec5452b66043cd81eff6917802068/LICENSE"
+  },
   "url": "https://www.electronjs.org",
   "community": "https://discord.com/invite/electron",
   "documentation": "https://www.electronjs.org/docs/latest/"

@@ -304,7 +304,10 @@
       "date": "2016-11-23T06:05:21Z"
     }
   ],
-  "codeLicense": "MIT",
+  "codeLicense": {
+    "name": "MIT",
+    "url": "https://github.com/facebook/react-native/blob/6c66cef8ecb6222c6930ef2104be97e3ab26c77b/LICENSE"
+  },
   "url": "https://reactnative.dev/",
   "community": "https://discord.gg/JuTwWB8rsy",
   "documentation": "https://reactnative.dev/docs/getting-started"
