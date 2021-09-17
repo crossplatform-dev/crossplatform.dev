@@ -44,7 +44,10 @@ const TECHNOLOGY = {
       date: '2021-01-01T00:00:00Z',
     },
   ],
-  codeLicense: '',
+  codeLicense: {
+    name: '',
+    url: ''
+  },
   url: 'https://',
   community: 'https://',
   documentation: 'https://',

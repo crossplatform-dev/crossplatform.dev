@@ -56,13 +56,20 @@
       "format": "uri",
       "pattern": "^https?://"
     },
+    "codeLicense": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "$ref": "#/$defs/website" }
+      }
+    },
     "properties": {
       "$schema": { "type": "string" },
       "name": { "type": "string" },
       "normalizedName": { "type": "string" },
       "platforms": { "$ref": "#/$defs/platforms" },
       "languages": { "$ref": "#/$defs/languages" },
-      "codeLicense": { "type": "string" },
+      "codeLicense": { "$ref": "#/$defs/codeLicense" },
       "url": { "$ref": "#/$defs/website" },
       "community": { "$ref": "#/$defs/website" },
       "documentation": { "$ref": "#/$defs/website" },
