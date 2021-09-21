@@ -1,6 +1,7 @@
 const interpolateData = require('./src/transformers/interpolate-data');
 const importCode = require('./src/transformers/import-code');
 const partialContent = require('./src/transformers/partial-content');
+const fiddleEmbedder = require('./src/transformers/fiddle-embedder.js');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -109,7 +110,7 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/crossplatform-dev/crossplatform.dev/edit/main/',
-          remarkPlugins: [importCode, partialContent, interpolateData],
+          remarkPlugins: [importCode, partialContent, interpolateData, fiddleEmbedder],
         },
         // blog: {
         //   showReadingTime: true,
