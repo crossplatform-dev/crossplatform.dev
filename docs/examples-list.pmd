@@ -3,21 +3,16 @@
 | Feature | Electron | React Native | WebView2 | Xamarin |
 | --- | :---: | :---: | :---: | :---: |
 | Bluetooth access |✅ | | | |
-| Clipboard access |✅ | | | |
-| Compression codecs |✅ | | | |
 | Custom title bar |🛠 | | | |
 | File System access |✅ | | | |
 | Gamepad access | | | | |
 | Generic sensor access | | | | |
 | Geolocation | | | | |
-| Human Interface access |🛠 | | | |
 | Idle detection | | | | |
-| Multi-screen window placement | | | | |
 | Notifications | | | | |
 | Run on OS login | | | | |
 | Serial access |✅ | | | |
 | URL handler | | | | |
 | [URL protocol handler](/docs/examples/url-protocol-handler) |✅ ([Docs](https://www.electronjs.org/docs/latest/tutorial/launch-app-from-url-in-another-app)) | | | |
 | USB access | | | | |
-| Using local fonts | | | | |
 | Video codecs | | | | |

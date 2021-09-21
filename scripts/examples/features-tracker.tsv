@@ -9,7 +9,7 @@ QuicTransport 	https://web.dev/webtransport/			https://crbug.com/1011392	Data
 IndexedDB	https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API				Data
 Streams API: transferable streams	Transferable Streams Explainer	Available since 11-x-y	https://gist.github.com/jkleinsc/019452af710adab23bdf13a04ffae95f	https://crbug.com/894838	Data/Streams
 WebSocketStream	https://web.dev/websocketstream/	Available since 8-x-y	https://gist.github.com/bc39d84ce53330c9502e8fd80aaf7b68	https://crbug.com/983030	Data/Streams
-PointerLock unadjustedMovement	https://web.dev/disable-mouse-acceleration/	Available since 11-x-y	https://gist.github.com/b48732f4d0580a2ad081ef0f86c4798f	https://crbug.com/982379	Device	pressing "ESC" to exit pointer lock requires a small bit of code to enable:   document.addEventListener('keydown', function(event) {   if (event.key === "Escape") {     document.exitPointerLock();   } });
+PointerLock unadjustedMovement	https://web.dev/disable-mouse-acceleration/	Available since 11-x-y	https://gist.github.com/b48732f4d0580a2ad081ef0f86c4798f	https://crbug.com/982379	Device	pressing ESC to exit pointer lock requires a small bit of code to enable
 Web Serial API	https://web.dev/serial/	Available since 12-x-y	https://gist.github.com/284893c7f01d3cb4559508ca06919481	https://crbug.com/884928 	Device
 WebHID (Human Interface Device)	https://web.dev/hid/	https://github.com/electron/electron/pull/30213	https://gist.github.com/3239fa09314baae55ff2bab76e3285ed	https://crbug.com/890096	Device
 Multi-Screen Window Placement	https://web.dev/multi-screen-window-placement/			https://crbug.com/897300	Device

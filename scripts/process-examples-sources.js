@@ -17,10 +17,7 @@ const globby = require('globby');
  * us to rename the feature to something more generic we can use for that goal.
  */
 const ALIASES = new Map([
-  ['Compression codecs', 'Compression codecs'],
   ['Web Serial API', 'Serial access'],
-  ['WebHID (Human Interface Device)', 'Human Interface access'],
-  ['Multi-Screen Window Placement', 'Multi-screen window placement'],
   ['Web Bluetooth', 'Bluetooth access'],
   ['Generic sensor API', 'Generic sensor access'],
   ['Geolocation API', 'Geolocation'],
@@ -29,7 +26,6 @@ const ALIASES = new Map([
   ['File System Access', 'File System access'],
   ['WebCodecs', 'Video codecs'],
   ['Push Notifications', 'Notifications'],
-  ['Local Font Access', 'Using local fonts'],
   ['Idle Detection', 'Idle detection'],
   ['Run PWA on OS Login', 'Run on OS login'],
   ['URL Protocol Handler Registration for PWAs', 'URL protocol handler'],

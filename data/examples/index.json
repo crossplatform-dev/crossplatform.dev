@@ -28,62 +28,6 @@
     }
   },
   {
-    "name": "Clipboard access",
-    "electron": {
-      "gist": "https://gist.github.com/8ea53811186140e4c4c9d9729fcb2353",
-      "status": "Available since 10-x-y with flag",
-      "documentation": ""
-    },
-    "pwa": {
-      "gist": "",
-      "status": "https://crbug.com/897289",
-      "documentation": "https://github.com/WICG/raw-clipboard-access/blob/master/explainer.md"
-    },
-    "react-native": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "webview2": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "xamarin": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    }
-  },
-  {
-    "name": "Compression codecs",
-    "electron": {
-      "gist": "https://gist.github.com/6038c9a6ad902b7b0dbab813dfbf600a",
-      "status": "Available since 8-x-y",
-      "documentation": ""
-    },
-    "pwa": {
-      "gist": "",
-      "status": "https://crbug.com/897298",
-      "documentation": "https://github.com/WICG/compression/blob/master/explainer.md"
-    },
-    "react-native": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "webview2": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "xamarin": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    }
-  },
-  {
     "name": "Custom title bar",
     "electron": {
       "gist": "",
@@ -224,34 +168,6 @@
     }
   },
   {
-    "name": "Human Interface access",
-    "electron": {
-      "gist": "https://gist.github.com/3239fa09314baae55ff2bab76e3285ed",
-      "status": "https://github.com/electron/electron/pull/30213",
-      "documentation": ""
-    },
-    "pwa": {
-      "gist": "",
-      "status": "https://crbug.com/890096",
-      "documentation": "https://web.dev/hid/"
-    },
-    "react-native": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "webview2": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "xamarin": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    }
-  },
-  {
     "name": "Idle detection",
     "electron": {
       "gist": "",
@@ -262,62 +178,6 @@
       "gist": "",
       "status": "https://crbug.com/878979",
       "documentation": "https://web.dev/idle-detection/"
-    },
-    "react-native": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "webview2": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "xamarin": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    }
-  },
-  {
-    "name": "Multi-screen window placement",
-    "electron": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "pwa": {
-      "gist": "",
-      "status": "https://crbug.com/897300",
-      "documentation": "https://web.dev/multi-screen-window-placement/"
-    },
-    "react-native": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "webview2": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "xamarin": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    }
-  },
-  {
-    "name": "Notifications",
-    "electron": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "pwa": {
-      "gist": "",
-      "status": "",
-      "documentation": "https://web.dev/push-notifications-overview/"
     },
     "react-native": {
       "gist": "",
@@ -458,34 +318,6 @@
       "gist": "",
       "status": "",
       "documentation": "https://web.dev/usb/"
-    },
-    "react-native": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "webview2": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "xamarin": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    }
-  },
-  {
-    "name": "Using local fonts",
-    "electron": {
-      "gist": "",
-      "status": "",
-      "documentation": ""
-    },
-    "pwa": {
-      "gist": "",
-      "status": "https://crbug.com/535764 ",
-      "documentation": "https://web.dev/local-fonts/"
     },
     "react-native": {
       "gist": "",
