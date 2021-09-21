@@ -196,6 +196,34 @@
     }
   },
   {
+    "name": "Notifications",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "",
+      "documentation": "https://web.dev/push-notifications-overview/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
     "name": "Run on OS login",
     "electron": {
       "gist": "",

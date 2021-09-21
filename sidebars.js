@@ -1,5 +1,12 @@
 module.exports = {
-  technologies: ['technologies', 'electron', 'webview2', 'react-native', 'xamarin'],
+  technologies: [
+    'technologies',
+    'electron',
+    'pwa',
+    'react-native',
+    'webview2',
+    'xamarin',
+  ],
   rendering: [
     'rendering',
     {

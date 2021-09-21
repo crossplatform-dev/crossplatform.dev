@@ -1,18 +1,18 @@
 <!-- ⚠ File automatically generated in process-examples-sources.js. DO NOT MODIFY MANUALLY -->
 
-| Feature | Electron | React Native | WebView2 | Xamarin |
-| --- | :---: | :---: | :---: | :---: |
-| Bluetooth access |✅ | | | |
-| Custom title bar |🛠 | | | |
-| File System access |✅ | | | |
-| Gamepad access | | | | |
-| Generic sensor access | | | | |
-| Geolocation | | | | |
-| Idle detection | | | | |
-| Notifications | | | | |
-| Run on OS login | | | | |
-| Serial access |✅ | | | |
-| URL handler | | | | |
-| [URL protocol handler](/docs/examples/url-protocol-handler) |✅ ([Docs](https://www.electronjs.org/docs/latest/tutorial/launch-app-from-url-in-another-app)) | | | |
-| USB access | | | | |
-| Video codecs | | | | |
+| Feature | Electron | PWA | React Native | WebView2 | Xamarin |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| Bluetooth access |✅ | | | | |
+| Custom title bar |🛠 |❓ ([Docs](https://web.dev/window-controls-overlay/)) | | | |
+| File System access |✅ |❓ ([Docs](https://web.dev/file-system-access/)) | | | |
+| Gamepad access | | | | | |
+| Generic sensor access | | | | | |
+| Geolocation | | | | | |
+| Idle detection | |❓ ([Docs](https://web.dev/idle-detection/)) | | | |
+| Notifications | | | | | |
+| Run on OS login | |❓ ([Docs](https://chromestatus.com/feature/5534549008187392)) | | | |
+| Serial access |✅ |❓ ([Docs](https://web.dev/serial/)) | | | |
+| URL handler | |❓ ([Docs](https://web.dev/pwa-url-handler/)) | | | |
+| [URL protocol handler](/docs/examples/url-protocol-handler) |✅ ([Docs](https://www.electronjs.org/docs/latest/tutorial/launch-app-from-url-in-another-app)) |❓ ([Docs](https://web.dev/url-protocol-handler/)) | | | |
+| USB access | | | | | |
+| Video codecs | |❓ ([Docs](https://web.dev/webcodecs/)) | | | |

@@ -1,0 +1,38 @@
+{
+  "$schema": "../schemas/technology.json",
+  "name": "PWA",
+  "normalizedName": "pwa",
+  "platforms": {
+    "Windows": "✅",
+    "macOS": "✅",
+    "Linux": "✅",
+    "Android": "✅",
+    "iOS": "✅"
+  },
+  "languages": {
+    "C++": "",
+    "C#": "",
+    "Go": "",
+    "Java": "",
+    "JavaScript": "✅",
+    "Rust": ""
+  },
+  "rendering": {
+    "Browser engine": "✅",
+    "Platform controls": "",
+    "Direct drawing": ""
+  },
+  "releases": [
+    {
+      "version": "N/A",
+      "date": "2021-01-01T00:00:00Z"
+    }
+  ],
+  "codeLicense": {
+    "name": "BSD 3-clause",
+    "url": "https://source.chromium.org/chromium/chromium/src/+/main:LICENSE"
+  },
+  "url": "https://web.dev/progressive-web-apps/",
+  "community": "https://www.chromium.org/developers/discussion-groups",
+  "documentation": "https://web.dev/learn/"
+}

@@ -179,7 +179,7 @@ const normalizeStatus = (status) => {
   }
   if (status.includes('crbug')) {
     // TODO: Get the resolution of the issue via Playwright because x-xsrf-token and other stuff :(
-    return 'TBD';
+    return '❓';
   }
 
   return status;
