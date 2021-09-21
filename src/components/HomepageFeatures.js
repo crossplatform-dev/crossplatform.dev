@@ -15,8 +15,8 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Check code snippets',
-    link: '/docs/snippets',
+    title: 'Check code examples',
+    link: '/docs/examples',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>

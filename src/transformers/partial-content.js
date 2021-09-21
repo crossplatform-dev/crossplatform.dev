@@ -8,10 +8,11 @@ const unified = require('unified');
 const visitChildren = require('unist-util-visit-children');
 const toMDAST = require('remark-parse');
 const vfile = require('vfile');
+const admonitions = require('remark-admonitions');
 const importCode = require('./import-code');
 
 const regExp = /{@import (.*?\.pmd)}/;
-const processor = unified().use(toMDAST).use(importCode);
+const processor = unified().use(toMDAST).use(admonitions).use(importCode);
 
 const replace = async (node, filePath) => {
   try {
@@ -63,7 +64,7 @@ const attacher = () => {
 
       const absPath = resolve(file.dirname, filePath);
 
-      replacements.push(replace(node, absPath))
+      replacements.push(replace(node, absPath));
     });
 
     visit(tree);

@@ -1,0 +1,49 @@
+Feature	Documentation	Electron Status	Gist	Tracking issue	Category	Additional Notes
+Async Clipboard: Read and Write Images	https://web.dev/async-clipboard/	Available since 6-x-y	https://gist.github.com/jkleinsc/06b8f00c2f34f3cc27e4969ea24c0c9e	https://crbug.com/150835	Clipboard
+text/html support for async clipboard api	Design Doc: HTML for Clipboard API	Available since 11-x-y	https://gist.github.com/9458c54866141b29e8494718a9f65fbb	https://crbug.com/931839	Clipboard
+Raw Clipboard Access API	https://github.com/WICG/raw-clipboard-access/blob/master/explainer.md	Available since 10-x-y with flag	https://gist.github.com/8ea53811186140e4c4c9d9729fcb2353	https://crbug.com/897289	Clipboard	Requires app.commandLine.appendSwitch('enable-features', 'RawClipboard');
+Compression codecs	https://github.com/WICG/compression/blob/master/explainer.md	Available since 8-x-y	https://gist.github.com/6038c9a6ad902b7b0dbab813dfbf600a	https://crbug.com/897298	Data
+Periodic Background Sync	https://web.dev/periodic-background-sync/	Throws DOMException	https://gist.github.com/jkleinsc/752b441599ba09009ef79025a24d77dc	https://crbug.com/925297	Data	Not implmented in Electron - started work here:https://github.com/electron/electron/tree/enable-background-sync
+Content Indexing API	https://web.dev/content-indexing-api/	Available since 8-x-y with flag	https://gist.github.com/jkleinsc/23297dde37145610066c2842eed22b57	https://crbug.com/973844	Data	Requires enableBlinkFeatures: 'ContentIndex'
+QuicTransport 	https://web.dev/webtransport/			https://crbug.com/1011392	Data
+IndexedDB	https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API				Data
+Streams API: transferable streams	Transferable Streams Explainer	Available since 11-x-y	https://gist.github.com/jkleinsc/019452af710adab23bdf13a04ffae95f	https://crbug.com/894838	Data/Streams
+WebSocketStream	https://web.dev/websocketstream/	Available since 8-x-y	https://gist.github.com/bc39d84ce53330c9502e8fd80aaf7b68	https://crbug.com/983030	Data/Streams
+PointerLock unadjustedMovement	https://web.dev/disable-mouse-acceleration/	Available since 11-x-y	https://gist.github.com/b48732f4d0580a2ad081ef0f86c4798f	https://crbug.com/982379	Device	pressing "ESC" to exit pointer lock requires a small bit of code to enable:   document.addEventListener('keydown', function(event) {   if (event.key === "Escape") {     document.exitPointerLock();   } });
+Web Serial API	https://web.dev/serial/	Available since 12-x-y	https://gist.github.com/284893c7f01d3cb4559508ca06919481	https://crbug.com/884928 	Device
+WebHID (Human Interface Device)	https://web.dev/hid/	https://github.com/electron/electron/pull/30213	https://gist.github.com/3239fa09314baae55ff2bab76e3285ed	https://crbug.com/890096	Device
+Multi-Screen Window Placement	https://web.dev/multi-screen-window-placement/			https://crbug.com/897300	Device
+Web Bluetooth	https://web.dev/bluetooth/	Available since v1.2.1	https://gist.github.com/8e9fcf7c049562fde38b474b4c169f90		Device
+Web Bluetooth BluetoothDevice.watchAdvertisements()	https://chromestatus.com/feature/5180688812736512			https://crbug.com/654897	Device
+Keyboard Events	https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent				Device
+Pointer Events	https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events				Device
+ window.print()	https://developer.mozilla.org/en-US/docs/Web/API/Window/print				Device
+Generic sensor API	https://web.dev/generic-sensor/				Device
+Geolocation API	https://developers.google.com/web/fundamentals/native-hardware/user-location				Device
+Presentation API	https://developers.google.com/web/updates/2018/04/present-web-pages-to-secondary-attached-displays				Device
+Web USB	https://web.dev/usb/				Device
+Pointer Lock	https://web.dev/disable-mouse-acceleration/				Device
+Keyboard Lock	https://web.dev/keyboard-lock/				Device
+Gamepad API	https://web.dev/gamepad/				Device
+File System Access	https://web.dev/file-system-access/	Available since 10-x-y	https://gist.github.com/e5f296d48308244e713ad9301f8173c7	https://crbug.com/853326	File
+File Handling	https://web.dev/file-handling/			https://crbug.com/829689	File
+Storage Foundation API	https://web.dev/storage-foundation/			https://crbug.com/914488	File
+Barcode Detection API	https://web.dev/shape-detection/	Available since 9-x-y	https://gist.github.com/7ff438d1ea351cd1bf78197481001d74	https://crbug.com/659138	Media
+Face Detection API	https://web.dev/shape-detection/	Available since 9-x-y with flag	https://gist.github.com/7ff438d1ea351cd1bf78197481001d74	https://crbug.com/1072847	Media	Requires enableBlinkFeatures: 'FaceDetector'
+Pan/Tilt support for Camera	https://web.dev/camera-pan-tilt-zoom/	Available since 11-x-y	https://gist.github.com/11c4f285debd0eb260f3bf8ac506d5f7	https://crbug.com/934063	Media
+WebCodecs	https://web.dev/webcodecs/			https://crbug.com/897297 	Media
+MediaDevices.getUserMedia()	https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia				Media
+Badging API	https://web.dev/badging-api/	Available since  v12.0.0-beta.18	https://gist.github.com/2bc955fc813b56da8889545758621422	https://crbug.com/719176	Notifications
+Allow the Badging API to be used from a service worker	https://web.dev/badging-api/	Not implemented	https://gist.github.com/jkleinsc/1833cc0750835f01e56ec7682b6ddf72/	https://crbug.com/1036202	Notifications	Pull request to implement here: https://github.com/electron/electron/pull/27950
+Push Notifications	https://web.dev/push-notifications-overview/				Notifications
+Screen Wake Lock API	https://web.dev/wake-lock/	Available since 12-x-y	https://gist.github.com/aaf3188672fc170861da7f1c433c5cbb	https://crbug.com/257511	OS	10 and 11-x-y may work but uses different version of API
+Notification Triggers	https://web.dev/notification-triggers/			https://crbug.com/891339	Notifications
+Local Font Access	https://web.dev/local-fonts/			https://crbug.com/535764 	OS
+Idle Detection	https://web.dev/idle-detection/			https://crbug.com/878979	OS
+Ambient Light Sensor API - based on Generic Sensor API.	https://w3c.github.io/ambient-light/			https://crbug.com/606766	OS
+Run PWA on OS Login	https://chromestatus.com/feature/5534549008187392			https://crbug.com/897302	OS
+URL Protocol Handler Registration for PWAs	https://web.dev/url-protocol-handler/			https://crbug.com/897309	OS
+Window Controls Overlay for Installed Desktop Web Apps	https://web.dev/window-controls-overlay/	https://github.com/electron/electron/pull/29600  https://github.com/electron/electron/pull/29253		https://crbug.com/937121	OS
+Progressive Web Apps as URL Handlers	https://web.dev/pwa-url-handler/			https://crbug.com/1072058 	OS
+Tabbed application mode for PWAs	https://web.dev/tabbed-application-mode/			https://crbug.com/897314	UI
+Declarative Link Capturing	https://web.dev/declarative-link-capturing/
