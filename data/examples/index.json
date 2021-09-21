@@ -1,0 +1,534 @@
+[
+  {
+    "name": "Bluetooth access",
+    "electron": {
+      "gist": "https://gist.github.com/8e9fcf7c049562fde38b474b4c169f90",
+      "status": "Available since v1.2.1",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "",
+      "documentation": "https://web.dev/bluetooth/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Clipboard access",
+    "electron": {
+      "gist": "https://gist.github.com/8ea53811186140e4c4c9d9729fcb2353",
+      "status": "Available since 10-x-y with flag",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/897289",
+      "documentation": "https://github.com/WICG/raw-clipboard-access/blob/master/explainer.md"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Compression codecs",
+    "electron": {
+      "gist": "https://gist.github.com/6038c9a6ad902b7b0dbab813dfbf600a",
+      "status": "Available since 8-x-y",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/897298",
+      "documentation": "https://github.com/WICG/compression/blob/master/explainer.md"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Custom title bar",
+    "electron": {
+      "gist": "",
+      "status": "https://github.com/electron/electron/pull/29600  https://github.com/electron/electron/pull/29253",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/937121",
+      "documentation": "https://web.dev/window-controls-overlay/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "File System access",
+    "electron": {
+      "gist": "https://gist.github.com/e5f296d48308244e713ad9301f8173c7",
+      "status": "Available since 10-x-y",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/853326",
+      "documentation": "https://web.dev/file-system-access/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Gamepad access",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "",
+      "documentation": "https://web.dev/gamepad/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Generic sensor access",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "",
+      "documentation": "https://web.dev/generic-sensor/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Geolocation",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "",
+      "documentation": "https://developers.google.com/web/fundamentals/native-hardware/user-location"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Human Interface access",
+    "electron": {
+      "gist": "https://gist.github.com/3239fa09314baae55ff2bab76e3285ed",
+      "status": "https://github.com/electron/electron/pull/30213",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/890096",
+      "documentation": "https://web.dev/hid/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Idle detection",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/878979",
+      "documentation": "https://web.dev/idle-detection/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Multi-screen window placement",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/897300",
+      "documentation": "https://web.dev/multi-screen-window-placement/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Notifications",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "",
+      "documentation": "https://web.dev/push-notifications-overview/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Run on OS login",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/897302",
+      "documentation": "https://chromestatus.com/feature/5534549008187392"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Serial access",
+    "electron": {
+      "gist": "https://gist.github.com/284893c7f01d3cb4559508ca06919481",
+      "status": "Available since 12-x-y",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/884928 ",
+      "documentation": "https://web.dev/serial/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "URL handler",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/1072058 ",
+      "documentation": "https://web.dev/pwa-url-handler/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "URL protocol handler",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/897309",
+      "documentation": "https://web.dev/url-protocol-handler/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "USB access",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "",
+      "documentation": "https://web.dev/usb/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Using local fonts",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/535764 ",
+      "documentation": "https://web.dev/local-fonts/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  },
+  {
+    "name": "Video codecs",
+    "electron": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "pwa": {
+      "gist": "",
+      "status": "https://crbug.com/897297 ",
+      "documentation": "https://web.dev/webcodecs/"
+    },
+    "react-native": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "webview2": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    },
+    "xamarin": {
+      "gist": "",
+      "status": "",
+      "documentation": ""
+    }
+  }
+]
