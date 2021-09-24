@@ -40,6 +40,11 @@ module.exports = {
           position: 'left',
           label: 'Examples'
         },
+        {
+          to:'/recommendation',
+          label: 'Recommendation engine',
+          position: 'left',
+        },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/crossplatform-dev/crossplatform.dev',
