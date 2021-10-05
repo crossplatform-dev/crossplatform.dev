@@ -15,7 +15,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "add-technology": "node scripts/add-technology.js",
     "prebuild": "json2ts -i data/schemas -o data/types",
-    "lint": "markdownlint docs/",
+    "test": "markdownlint docs/",
     "update-data": "node scripts/update-data.js"
   },
   "dependencies": {
@@ -51,7 +51,7 @@
     "json5": "^2.2.0",
     "latest-version": "^5.1.0",
     "markdownlint": "^0.24.0",
-    "markdownlint-cli": "^0.28.1",
+    "markdownlint-cli": "^0.29.0",
     "pluralize": "^8.0.0",
     "prettier": "^2.4.1",
     "semver": "^7.3.5",

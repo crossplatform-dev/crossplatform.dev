@@ -34,8 +34,8 @@ The implementation details for the iOS and Android are different and can be chec
 Microsoft is working on [.NET MAUI]:
 
 > .NET MAUI is open-source and is the evolution of Xamarin.Forms, extended from mobile to desktop
-> scenarios, with UI controls rebuilt from the ground up for performance and extensibility. If you've
-> previously used Xamarin.Forms to build cross-platform user interfaces, you'll notice many
+> scenarios, with UI controls rebuilt from the ground up for performance and extensibility. If
+> you've previously used Xamarin.Forms to build cross-platform user interfaces, you'll notice many
 > similarities with .NET MAUI.
 
 While Xamarin products still receive bug fixes and security updates, it is .NET MAUI the product
