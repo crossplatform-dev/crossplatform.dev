@@ -98,7 +98,11 @@ asynchronous and the UI thread never waits for the JavaScript thread to finish p
 This is better understood if we look at the threads that are spawned when a React Native application
 starts and how they communicate with each other.
 
-<!-- Simplified diagram of the threads -->
+<p align="center">
+
+![Architecture diagram of React Native showing how the Main thread communicates with the JavaScript and Custom Native modules](/img/react-native-schema.webp)
+
+</p>
 
 1. **Main thread** — This is the main thread which gets spawned as soon as the application launches.
    It loads the app and starts the JavaScript thread to execute the JavaScript code.
@@ -120,9 +124,13 @@ starts and how they communicate with each other.
 Looking at the initial example of a user interacting with the screen, if they tap on a button the
 native code sends a message through the bridge to the JavaScript context so the handler the
 developer wrote is executed. Any side effect of that execution that changes the UI will be send
-again over the bridge.
+again over the bridge, to the shadow thread to compute the changes, and back to the UI one.
 
-<!-- Diagram of messages being sent -->
+<p align="center">
+
+![Interaction diagram explaining the flow of information accross threads for a user tap that changes the UI on a React Native application](/img/react-native-interaction.webp)
+
+</p>
 
 To address some of the concerns lined out earlier, the React Native Core team is working on removing
 the “bridge” and replace it with a [new renderer][fabric], called Fabric, and a new mechanism to
