@@ -45,7 +45,7 @@
     "@octokit/graphql": "^4.8.0",
     "dayjs": "^1.10.7",
     "execa": "^5.1.1",
-    "globby": "^11.0.4",
+    "globby": "^13.0.0",
     "got": "^11.8.2",
     "json-schema-to-typescript": "^10.1.5",
     "json5": "^2.2.0",
