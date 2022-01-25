@@ -1,0 +1,70 @@
+{
+    "$schema": "../schemas/technology.json",
+    "name": "Tauri",
+    "normalizedName": "tauri",
+    "platforms": {
+        "Windows": "✅",
+        "macOS": "✅",
+        "Linux": "✅",
+        "Android": "⚒",
+        "iOS": "⚒"
+    },
+    "languages": {
+        "C++": "",
+        "C#": "",
+        "Go": "",
+        "Java": "",
+        "JavaScript": "✅",
+        "Rust": "✅"
+    },
+    "rendering": {
+        "Browser engine": "✅",
+        "Platform controls": "",
+        "Direct drawing": ""
+    },
+    "releases": [
+        {
+            "version": "1.0.0-beta.8",
+            "date": "2021-08-24T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.7",
+            "date": "2021-08-17T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.6",
+            "date": "2021-08-16T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.5",
+            "date": "2021-07-16T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.4",
+            "date": "2021-06-29T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.3",
+            "date": "2021-06-28T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.2",
+            "date": "2021-06-23T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.1",
+            "date": "2021-05-12T00:00:00Z"
+        },
+        {
+            "version": "1.0.0-beta.0",
+            "date": "2021-05-11T00:00:00Z"
+        }
+    ],
+    "codeLicense": {
+        "name": "Apache-2.0 OR MIT",
+        "url": "https://github.com/tauri-apps/tauri/blob/9bb68973dd10f3cb98d2a95e5432bfc765d77064/LICENSE.spdx"
+    },
+    "url": "https://tauri.studio",
+    "community": "https://discord.com/invite/tauri",
+    "documentation": "https://tauri.studio/docs/architecture"
+}
