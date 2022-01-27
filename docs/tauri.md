@@ -4,10 +4,11 @@ title: Tauri
 
 # Tauri
 
-Tauri is a framework to build smaller, faster and more secure desktop apps using web technologies.
+Tauri is a framework to build smaller, faster and more secure desktop apps using web technologies as well as the Rust programming language.
 
-Tauri applications use OS provided WebView to render the User Interface, so Developers can leverage the abundance of tools and frameworks such as React, Vue or Vite. The applications backend is written in Rust and allows Developers to manage windows, maintaing app state and mediate Operating System calls in a safe environment.
-Security is very important to Tauri, it undergoes regular security audits and [implements many security features][Security Features] not found in other _[Browser engine]_ frameworks.
+Tauri applications use the respective OS provided WebView to render the User Interface, so Developers can leverage the abundance of tools and frameworks such as React, Vue or Vite. The application's backend is written in Rust and allows Developers to manage windows, maintain app state and mediate Operating System calls in a safe environment.
+
+Security is very important to Tauri, it undergoes regular security audits and [implements many security features][Security Features] not found in other WebView frameworks.
 
 ## Summary
 
