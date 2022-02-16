@@ -6,6 +6,7 @@ module.exports = {
     'react-native',
     'webview2',
     'xamarin',
+    'tauri'
   ],
   rendering: [
     'rendering',
