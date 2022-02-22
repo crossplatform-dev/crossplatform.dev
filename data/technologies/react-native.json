@@ -24,6 +24,10 @@
   },
   "releases": [
     {
+      "version": "v0.67.3",
+      "date": "2022-02-22T14:36:52Z"
+    },
+    {
       "version": "v0.67.2",
       "date": "2022-01-31T17:17:27Z"
     },
@@ -278,10 +282,6 @@
     {
       "version": "vNovember 2017",
       "date": "2017-12-06T02:39:30Z"
-    },
-    {
-      "version": "vOctober 2017",
-      "date": "2017-11-03T16:51:20Z"
     }
   ],
   "codeLicense": {
