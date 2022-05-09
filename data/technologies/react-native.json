@@ -24,6 +24,10 @@
   },
   "releases": [
     {
+      "version": "v0.68.2",
+      "date": "2022-05-09T10:43:44Z"
+    },
+    {
       "version": "v0.68.1",
       "date": "2022-04-13T13:37:50Z"
     },
@@ -262,10 +266,6 @@
     {
       "version": "vSeptember 2018 - revision 5",
       "date": "2018-11-13T15:07:04Z"
-    },
-    {
-      "version": "vSeptember 2018 - revision 4",
-      "date": "2018-10-25T16:52:59Z"
     }
   ],
   "codeLicense": {
