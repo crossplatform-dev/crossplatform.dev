@@ -24,6 +24,22 @@
   },
   "releases": [
     {
+      "version": "v0.67.5",
+      "date": "2022-11-06T20:50:33Z"
+    },
+    {
+      "version": "v0.68.5",
+      "date": "2022-11-06T20:13:48Z"
+    },
+    {
+      "version": "v0.69.7",
+      "date": "2022-11-06T20:07:31Z"
+    },
+    {
+      "version": "v0.70.5",
+      "date": "2022-11-06T20:06:48Z"
+    },
+    {
       "version": "v0.70.4",
       "date": "2022-10-25T14:20:44Z"
     },
@@ -234,18 +250,6 @@
     {
       "version": "v0.60.2 - React Native with Hermes as opt-in for Android",
       "date": "2019-07-11T16:17:13Z"
-    },
-    {
-      "version": "v0.60.1",
-      "date": "2019-07-11T15:51:34Z"
-    },
-    {
-      "version": "v0.60.0",
-      "date": "2019-07-03T12:54:51Z"
-    },
-    {
-      "version": "v0.59.10",
-      "date": "2019-07-02T10:52:10Z"
     }
   ],
   "codeLicense": {
