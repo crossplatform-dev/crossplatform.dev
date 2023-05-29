@@ -22,12 +22,7 @@
     "Platform controls": "",
     "Direct drawing": ""
   },
-  "releases": [
-    {
-      "version": "v22.0.0",
-      "date": "2022-11-30T00:33:21Z"
-    }
-  ],
+  "releases": [],
   "codeLicense": {
     "name": "MIT",
     "url": "https://github.com/electron/electron/blob/6fdf350bea8ec5452b66043cd81eff6917802068/LICENSE"
