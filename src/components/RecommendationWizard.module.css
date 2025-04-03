@@ -1,0 +1,20 @@
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5em;
+}
+
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+button {
+    margin: 0.5em 0;
+}
+
+li {
+    list-style: none;
+}
